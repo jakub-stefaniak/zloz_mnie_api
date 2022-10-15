@@ -209,6 +209,7 @@ LawsuitGroupByOutputType _$LawsuitGroupByOutputTypeFromJson(
         Map<String, dynamic> json) =>
     LawsuitGroupByOutputType(
       id: json['id'] as int,
+      userId: json['userId'] as int,
       subjectId: json['subjectId'] as int,
       claimType: json['claimType'] as int,
       claimValue: (json['claimValue'] as num).toDouble(),
@@ -246,6 +247,7 @@ Map<String, dynamic> _$LawsuitGroupByOutputTypeToJson(
         LawsuitGroupByOutputType instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'userId': instance.userId,
       'subjectId': instance.subjectId,
       'claimType': instance.claimType,
       'claimValue': instance.claimValue,
@@ -509,6 +511,7 @@ LawsuitCountAggregateOutputType _$LawsuitCountAggregateOutputTypeFromJson(
         Map<String, dynamic> json) =>
     LawsuitCountAggregateOutputType(
       id: json['id'] as int,
+      userId: json['userId'] as int,
       subjectId: json['subjectId'] as int,
       claimType: json['claimType'] as int,
       claimValue: json['claimValue'] as int,
@@ -527,6 +530,7 @@ Map<String, dynamic> _$LawsuitCountAggregateOutputTypeToJson(
         LawsuitCountAggregateOutputType instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'userId': instance.userId,
       'subjectId': instance.subjectId,
       'claimType': instance.claimType,
       'claimValue': instance.claimValue,
@@ -545,6 +549,7 @@ LawsuitAvgAggregateOutputType _$LawsuitAvgAggregateOutputTypeFromJson(
         Map<String, dynamic> json) =>
     LawsuitAvgAggregateOutputType(
       id: (json['id'] as num?)?.toDouble(),
+      userId: (json['userId'] as num?)?.toDouble(),
       subjectId: (json['subjectId'] as num?)?.toDouble(),
       claimType: (json['claimType'] as num?)?.toDouble(),
       claimValue: (json['claimValue'] as num?)?.toDouble(),
@@ -555,6 +560,7 @@ Map<String, dynamic> _$LawsuitAvgAggregateOutputTypeToJson(
         LawsuitAvgAggregateOutputType instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'userId': instance.userId,
       'subjectId': instance.subjectId,
       'claimType': instance.claimType,
       'claimValue': instance.claimValue,
@@ -565,6 +571,7 @@ LawsuitSumAggregateOutputType _$LawsuitSumAggregateOutputTypeFromJson(
         Map<String, dynamic> json) =>
     LawsuitSumAggregateOutputType(
       id: json['id'] as int?,
+      userId: json['userId'] as int?,
       subjectId: json['subjectId'] as int?,
       claimType: json['claimType'] as int?,
       claimValue: (json['claimValue'] as num?)?.toDouble(),
@@ -575,6 +582,7 @@ Map<String, dynamic> _$LawsuitSumAggregateOutputTypeToJson(
         LawsuitSumAggregateOutputType instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'userId': instance.userId,
       'subjectId': instance.subjectId,
       'claimType': instance.claimType,
       'claimValue': instance.claimValue,
@@ -585,6 +593,7 @@ LawsuitMinAggregateOutputType _$LawsuitMinAggregateOutputTypeFromJson(
         Map<String, dynamic> json) =>
     LawsuitMinAggregateOutputType(
       id: json['id'] as int?,
+      userId: json['userId'] as int?,
       subjectId: json['subjectId'] as int?,
       claimType: json['claimType'] as int?,
       claimValue: (json['claimValue'] as num?)?.toDouble(),
@@ -602,6 +611,7 @@ Map<String, dynamic> _$LawsuitMinAggregateOutputTypeToJson(
         LawsuitMinAggregateOutputType instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'userId': instance.userId,
       'subjectId': instance.subjectId,
       'claimType': instance.claimType,
       'claimValue': instance.claimValue,
@@ -619,6 +629,7 @@ LawsuitMaxAggregateOutputType _$LawsuitMaxAggregateOutputTypeFromJson(
         Map<String, dynamic> json) =>
     LawsuitMaxAggregateOutputType(
       id: json['id'] as int?,
+      userId: json['userId'] as int?,
       subjectId: json['subjectId'] as int?,
       claimType: json['claimType'] as int?,
       claimValue: (json['claimValue'] as num?)?.toDouble(),
@@ -636,6 +647,7 @@ Map<String, dynamic> _$LawsuitMaxAggregateOutputTypeToJson(
         LawsuitMaxAggregateOutputType instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'userId': instance.userId,
       'subjectId': instance.subjectId,
       'claimType': instance.claimType,
       'claimValue': instance.claimValue,
@@ -692,6 +704,7 @@ Map<String, dynamic> _$UserSessionToJson(UserSession instance) =>
 
 Lawsuit _$LawsuitFromJson(Map<String, dynamic> json) => Lawsuit(
       id: json['id'] as int,
+      userId: json['userId'] as int,
       subjectId: json['subjectId'] as int,
       claimType: json['claimType'] as int,
       claimValue: (json['claimValue'] as num).toDouble(),
@@ -707,6 +720,7 @@ Lawsuit _$LawsuitFromJson(Map<String, dynamic> json) => Lawsuit(
 
 Map<String, dynamic> _$LawsuitToJson(Lawsuit instance) => <String, dynamic>{
       'id': instance.id,
+      'userId': instance.userId,
       'subjectId': instance.subjectId,
       'claimType': instance.claimType,
       'claimValue': instance.claimValue,

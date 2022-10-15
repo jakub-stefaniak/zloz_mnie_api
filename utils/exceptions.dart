@@ -9,3 +9,5 @@ class ReferenceNotExistsException implements Exception {}
 class RefreshTokenInvalidException implements Exception {}
 
 class UpdateRecordException implements Exception {}
+
+class ResourceNotFoundException implements Exception {}

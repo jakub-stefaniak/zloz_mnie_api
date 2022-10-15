@@ -69,9 +69,40 @@ Future<Response> _post(RequestContext context, String id) async {
   }
 }
 
+Future<Response> _get(RequestContext context, id) async {
+  try {
+    late int lawsuitId;
+
+    try {
+      lawsuitId = int.parse(id);
+    } catch (_) {
+      return Response.json(
+        statusCode: HttpStatus.badRequest,
+        body: ServerError.badRequest(),
+      );
+    }
+
+    final lawsuit =
+        await context.read<LawsuitRepository>().getLawsuit(lawsuitId);
+
+    return Response.json(
+      body: lawsuit,
+    );
+  } on UpdateRecordException {
+    return Response.json(
+      statusCode: HttpStatus.notFound,
+      body: ServerError.notFound(),
+    );
+  }
+}
+
 Future<Response> onRequest(RequestContext context, String id) async {
   if (context.request.method == HttpMethod.post) {
     return _post(context, id);
+  }
+
+  if (context.request.method == HttpMethod.get) {
+    return _get(context, id);
   }
 
   return Response.json(

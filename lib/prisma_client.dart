@@ -22,6 +22,7 @@ part 'prisma_client.g.dart';
 
 enum LawsuitScalarFieldEnum {
   id,
+  userId,
   subjectId,
   claimType,
   claimValue,
@@ -506,6 +507,7 @@ class LawsuitWhereInput implements _i1.JsonSerializable {
     this.OR,
     this.NOT,
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -526,6 +528,8 @@ class LawsuitWhereInput implements _i1.JsonSerializable {
   final _i1.PrismaNullable<LawsuitWhereInput> NOT;
 
   final _i1.PrismaNullable<IntFilter> id;
+
+  final _i1.PrismaNullable<IntFilter> userId;
 
   final _i1.PrismaNullable<IntFilter> subjectId;
 
@@ -556,6 +560,7 @@ class LawsuitWhereInput implements _i1.JsonSerializable {
       'OR': OR,
       'NOT': NOT,
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -574,6 +579,7 @@ class LawsuitWhereInput implements _i1.JsonSerializable {
 class LawsuitOrderByWithRelationInput implements _i1.JsonSerializable {
   const LawsuitOrderByWithRelationInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -588,6 +594,8 @@ class LawsuitOrderByWithRelationInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> userId;
 
   final _i1.PrismaNullable<SortOrder> subjectId;
 
@@ -615,6 +623,7 @@ class LawsuitOrderByWithRelationInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -646,6 +655,7 @@ class LawsuitWhereUniqueInput implements _i1.JsonSerializable {
 class LawsuitOrderByWithAggregationInput implements _i1.JsonSerializable {
   const LawsuitOrderByWithAggregationInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -665,6 +675,8 @@ class LawsuitOrderByWithAggregationInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> userId;
 
   final _i1.PrismaNullable<SortOrder> subjectId;
 
@@ -702,6 +714,7 @@ class LawsuitOrderByWithAggregationInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -728,6 +741,7 @@ class LawsuitScalarWhereWithAggregatesInput implements _i1.JsonSerializable {
     this.OR,
     this.NOT,
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -748,6 +762,8 @@ class LawsuitScalarWhereWithAggregatesInput implements _i1.JsonSerializable {
   final _i1.PrismaNullable<LawsuitScalarWhereWithAggregatesInput> NOT;
 
   final _i1.PrismaNullable<IntWithAggregatesFilter> id;
+
+  final _i1.PrismaNullable<IntWithAggregatesFilter> userId;
 
   final _i1.PrismaNullable<IntWithAggregatesFilter> subjectId;
 
@@ -778,6 +794,7 @@ class LawsuitScalarWhereWithAggregatesInput implements _i1.JsonSerializable {
       'OR': OR,
       'NOT': NOT,
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -1256,6 +1273,7 @@ class UserSessionUncheckedUpdateManyInput implements _i1.JsonSerializable {
 
 class LawsuitCreateInput implements _i1.JsonSerializable {
   const LawsuitCreateInput({
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -1268,6 +1286,8 @@ class LawsuitCreateInput implements _i1.JsonSerializable {
     this.suingCity,
     this.suingPostCode,
   });
+
+  final _i1.PrismaNullable<int> userId;
 
   final _i1.PrismaNullable<int> subjectId;
 
@@ -1294,6 +1314,7 @@ class LawsuitCreateInput implements _i1.JsonSerializable {
   @override
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -1312,6 +1333,7 @@ class LawsuitCreateInput implements _i1.JsonSerializable {
 class LawsuitUncheckedCreateInput implements _i1.JsonSerializable {
   const LawsuitUncheckedCreateInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -1326,6 +1348,8 @@ class LawsuitUncheckedCreateInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<int> id;
+
+  final _i1.PrismaNullable<int> userId;
 
   final _i1.PrismaNullable<int> subjectId;
 
@@ -1353,6 +1377,7 @@ class LawsuitUncheckedCreateInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -1370,6 +1395,7 @@ class LawsuitUncheckedCreateInput implements _i1.JsonSerializable {
 
 class LawsuitUpdateInput implements _i1.JsonSerializable {
   const LawsuitUpdateInput({
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -1382,6 +1408,8 @@ class LawsuitUpdateInput implements _i1.JsonSerializable {
     this.suingCity,
     this.suingPostCode,
   });
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> userId;
 
   final _i1.PrismaNullable<IntFieldUpdateOperationsInput> subjectId;
 
@@ -1410,6 +1438,7 @@ class LawsuitUpdateInput implements _i1.JsonSerializable {
   @override
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -1428,6 +1457,7 @@ class LawsuitUpdateInput implements _i1.JsonSerializable {
 class LawsuitUncheckedUpdateInput implements _i1.JsonSerializable {
   const LawsuitUncheckedUpdateInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -1442,6 +1472,8 @@ class LawsuitUncheckedUpdateInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<IntFieldUpdateOperationsInput> id;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> userId;
 
   final _i1.PrismaNullable<IntFieldUpdateOperationsInput> subjectId;
 
@@ -1471,6 +1503,7 @@ class LawsuitUncheckedUpdateInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -1488,6 +1521,7 @@ class LawsuitUncheckedUpdateInput implements _i1.JsonSerializable {
 
 class LawsuitUpdateManyMutationInput implements _i1.JsonSerializable {
   const LawsuitUpdateManyMutationInput({
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -1500,6 +1534,8 @@ class LawsuitUpdateManyMutationInput implements _i1.JsonSerializable {
     this.suingCity,
     this.suingPostCode,
   });
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> userId;
 
   final _i1.PrismaNullable<IntFieldUpdateOperationsInput> subjectId;
 
@@ -1528,6 +1564,7 @@ class LawsuitUpdateManyMutationInput implements _i1.JsonSerializable {
   @override
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -1546,6 +1583,7 @@ class LawsuitUpdateManyMutationInput implements _i1.JsonSerializable {
 class LawsuitUncheckedUpdateManyInput implements _i1.JsonSerializable {
   const LawsuitUncheckedUpdateManyInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -1560,6 +1598,8 @@ class LawsuitUncheckedUpdateManyInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<IntFieldUpdateOperationsInput> id;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> userId;
 
   final _i1.PrismaNullable<IntFieldUpdateOperationsInput> subjectId;
 
@@ -1589,6 +1629,7 @@ class LawsuitUncheckedUpdateManyInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -2329,6 +2370,7 @@ class FloatFilter implements _i1.JsonSerializable {
 class LawsuitCountOrderByAggregateInput implements _i1.JsonSerializable {
   const LawsuitCountOrderByAggregateInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -2343,6 +2385,8 @@ class LawsuitCountOrderByAggregateInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> userId;
 
   final _i1.PrismaNullable<SortOrder> subjectId;
 
@@ -2370,6 +2414,7 @@ class LawsuitCountOrderByAggregateInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -2388,6 +2433,7 @@ class LawsuitCountOrderByAggregateInput implements _i1.JsonSerializable {
 class LawsuitAvgOrderByAggregateInput implements _i1.JsonSerializable {
   const LawsuitAvgOrderByAggregateInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -2395,6 +2441,8 @@ class LawsuitAvgOrderByAggregateInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> userId;
 
   final _i1.PrismaNullable<SortOrder> subjectId;
 
@@ -2408,6 +2456,7 @@ class LawsuitAvgOrderByAggregateInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -2419,6 +2468,7 @@ class LawsuitAvgOrderByAggregateInput implements _i1.JsonSerializable {
 class LawsuitMaxOrderByAggregateInput implements _i1.JsonSerializable {
   const LawsuitMaxOrderByAggregateInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -2433,6 +2483,8 @@ class LawsuitMaxOrderByAggregateInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> userId;
 
   final _i1.PrismaNullable<SortOrder> subjectId;
 
@@ -2460,6 +2512,7 @@ class LawsuitMaxOrderByAggregateInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -2478,6 +2531,7 @@ class LawsuitMaxOrderByAggregateInput implements _i1.JsonSerializable {
 class LawsuitMinOrderByAggregateInput implements _i1.JsonSerializable {
   const LawsuitMinOrderByAggregateInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -2492,6 +2546,8 @@ class LawsuitMinOrderByAggregateInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> userId;
 
   final _i1.PrismaNullable<SortOrder> subjectId;
 
@@ -2519,6 +2575,7 @@ class LawsuitMinOrderByAggregateInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -2537,6 +2594,7 @@ class LawsuitMinOrderByAggregateInput implements _i1.JsonSerializable {
 class LawsuitSumOrderByAggregateInput implements _i1.JsonSerializable {
   const LawsuitSumOrderByAggregateInput({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -2544,6 +2602,8 @@ class LawsuitSumOrderByAggregateInput implements _i1.JsonSerializable {
   });
 
   final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> userId;
 
   final _i1.PrismaNullable<SortOrder> subjectId;
 
@@ -2557,6 +2617,7 @@ class LawsuitSumOrderByAggregateInput implements _i1.JsonSerializable {
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
+      'userId': userId,
       'subjectId': subjectId,
       'claimType': claimType,
       'claimValue': claimValue,
@@ -4088,6 +4149,7 @@ class AggregateLawsuit implements _i1.JsonSerializable {
 class LawsuitGroupByOutputType implements _i1.JsonSerializable {
   const LawsuitGroupByOutputType({
     required this.id,
+    required this.userId,
     required this.subjectId,
     required this.claimType,
     required this.claimValue,
@@ -4110,6 +4172,8 @@ class LawsuitGroupByOutputType implements _i1.JsonSerializable {
       _$LawsuitGroupByOutputTypeFromJson(json);
 
   final int id;
+
+  final int userId;
 
   final int subjectId;
 
@@ -4512,6 +4576,7 @@ class UserSessionMaxAggregateOutputType implements _i1.JsonSerializable {
 class LawsuitCountAggregateOutputType implements _i1.JsonSerializable {
   const LawsuitCountAggregateOutputType({
     required this.id,
+    required this.userId,
     required this.subjectId,
     required this.claimType,
     required this.claimValue,
@@ -4530,6 +4595,8 @@ class LawsuitCountAggregateOutputType implements _i1.JsonSerializable {
       _$LawsuitCountAggregateOutputTypeFromJson(json);
 
   final int id;
+
+  final int userId;
 
   final int subjectId;
 
@@ -4569,6 +4636,7 @@ class LawsuitCountAggregateOutputType implements _i1.JsonSerializable {
 class LawsuitAvgAggregateOutputType implements _i1.JsonSerializable {
   const LawsuitAvgAggregateOutputType({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -4579,6 +4647,8 @@ class LawsuitAvgAggregateOutputType implements _i1.JsonSerializable {
       _$LawsuitAvgAggregateOutputTypeFromJson(json);
 
   final _i1.PrismaNullable<double> id;
+
+  final _i1.PrismaNullable<double> userId;
 
   final _i1.PrismaNullable<double> subjectId;
 
@@ -4600,6 +4670,7 @@ class LawsuitAvgAggregateOutputType implements _i1.JsonSerializable {
 class LawsuitSumAggregateOutputType implements _i1.JsonSerializable {
   const LawsuitSumAggregateOutputType({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -4610,6 +4681,8 @@ class LawsuitSumAggregateOutputType implements _i1.JsonSerializable {
       _$LawsuitSumAggregateOutputTypeFromJson(json);
 
   final _i1.PrismaNullable<int> id;
+
+  final _i1.PrismaNullable<int> userId;
 
   final _i1.PrismaNullable<int> subjectId;
 
@@ -4631,6 +4704,7 @@ class LawsuitSumAggregateOutputType implements _i1.JsonSerializable {
 class LawsuitMinAggregateOutputType implements _i1.JsonSerializable {
   const LawsuitMinAggregateOutputType({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -4648,6 +4722,8 @@ class LawsuitMinAggregateOutputType implements _i1.JsonSerializable {
       _$LawsuitMinAggregateOutputTypeFromJson(json);
 
   final _i1.PrismaNullable<int> id;
+
+  final _i1.PrismaNullable<int> userId;
 
   final _i1.PrismaNullable<int> subjectId;
 
@@ -4683,6 +4759,7 @@ class LawsuitMinAggregateOutputType implements _i1.JsonSerializable {
 class LawsuitMaxAggregateOutputType implements _i1.JsonSerializable {
   const LawsuitMaxAggregateOutputType({
     this.id,
+    this.userId,
     this.subjectId,
     this.claimType,
     this.claimValue,
@@ -4700,6 +4777,8 @@ class LawsuitMaxAggregateOutputType implements _i1.JsonSerializable {
       _$LawsuitMaxAggregateOutputTypeFromJson(json);
 
   final _i1.PrismaNullable<int> id;
+
+  final _i1.PrismaNullable<int> userId;
 
   final _i1.PrismaNullable<int> subjectId;
 
@@ -4808,6 +4887,7 @@ class UserSession implements _i1.JsonSerializable {
 class Lawsuit implements _i1.JsonSerializable {
   const Lawsuit({
     required this.id,
+    required this.userId,
     required this.subjectId,
     required this.claimType,
     required this.claimValue,
@@ -4825,6 +4905,8 @@ class Lawsuit implements _i1.JsonSerializable {
       _$LawsuitFromJson(json);
 
   final int id;
+
+  final int userId;
 
   final int subjectId;
 
@@ -7181,6 +7263,40 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
             },
           },
           {
+            'name': 'userId',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'Int',
+            'default': -1.0,
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'userId',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': -1.0,
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
             'name': 'subjectId',
             'kind': 'scalar',
             'isList': false,
@@ -7579,6 +7695,20 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
                 'name': 'autoincrement',
                 'args': [],
               },
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'userId',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': -1.0,
               'isGenerated': false,
               'isUpdatedAt': false,
             },
@@ -9421,6 +9551,27 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'deprecation': null,
             },
             {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
               'name': 'subjectId',
               'comment': null,
               'isNullable': false,
@@ -9677,6 +9828,21 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'deprecation': null,
             },
             {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
               'name': 'subjectId',
               'comment': null,
               'isNullable': false,
@@ -9878,6 +10044,21 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           'fields': [
             {
               'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'userId',
               'comment': null,
               'isNullable': false,
               'isRequired': false,
@@ -10200,6 +10381,27 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
             },
             {
               'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'userId',
               'comment': null,
               'isNullable': false,
               'isRequired': false,
@@ -12098,6 +12300,21 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           },
           'fields': [
             {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
               'name': 'subjectId',
               'comment': null,
               'isNullable': false,
@@ -12288,6 +12505,21 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'deprecation': null,
             },
             {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
               'name': 'subjectId',
               'comment': null,
               'isNullable': false,
@@ -12462,6 +12694,27 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
             'minNumFields': null,
           },
           'fields': [
+            {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
             {
               'name': 'subjectId',
               'comment': null,
@@ -12725,6 +12978,27 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'deprecation': null,
             },
             {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
               'name': 'subjectId',
               'comment': null,
               'isNullable': false,
@@ -12965,6 +13239,27 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
             'minNumFields': null,
           },
           'fields': [
+            {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
             {
               'name': 'subjectId',
               'comment': null,
@@ -13208,6 +13503,27 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           'fields': [
             {
               'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'userId',
               'comment': null,
               'isNullable': false,
               'isRequired': false,
@@ -15631,6 +15947,21 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'deprecation': null,
             },
             {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
               'name': 'subjectId',
               'comment': null,
               'isNullable': false,
@@ -15821,6 +16152,21 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'deprecation': null,
             },
             {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
               'name': 'subjectId',
               'comment': null,
               'isNullable': false,
@@ -15892,6 +16238,21 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           'fields': [
             {
               'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'userId',
               'comment': null,
               'isNullable': false,
               'isRequired': false,
@@ -16096,6 +16457,21 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'deprecation': null,
             },
             {
+              'name': 'userId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
               'name': 'subjectId',
               'comment': null,
               'isNullable': false,
@@ -16272,6 +16648,21 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           'fields': [
             {
               'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'userId',
               'comment': null,
               'isNullable': false,
               'isRequired': false,
@@ -20937,6 +21328,19 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'documentation': null,
             },
             {
+              'name': 'userId',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
               'name': 'subjectId',
               'isNullable': false,
               'outputType': {
@@ -23910,6 +24314,19 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'documentation': null,
             },
             {
+              'name': 'userId',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
               'name': 'subjectId',
               'isNullable': false,
               'outputType': {
@@ -24885,6 +25302,19 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'documentation': null,
             },
             {
+              'name': 'userId',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
               'name': 'subjectId',
               'isNullable': false,
               'outputType': {
@@ -25060,6 +25490,19 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'documentation': null,
             },
             {
+              'name': 'userId',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
               'name': 'subjectId',
               'isNullable': true,
               'outputType': {
@@ -25131,6 +25574,19 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'documentation': null,
             },
             {
+              'name': 'userId',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
               'name': 'subjectId',
               'isNullable': true,
               'outputType': {
@@ -25190,6 +25646,19 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           'fields': [
             {
               'name': 'id',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'userId',
               'isNullable': true,
               'outputType': {
                 'isList': false,
@@ -25364,6 +25833,19 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'documentation': null,
             },
             {
+              'name': 'userId',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
               'name': 'subjectId',
               'isNullable': true,
               'outputType': {
@@ -25518,6 +26000,7 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           'name': 'LawsuitScalarFieldEnum',
           'values': [
             'id',
+            'userId',
             'subjectId',
             'claimType',
             'claimValue',
@@ -25633,7 +26116,7 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
   },
 });
 final String schema = _i4.utf8.decode(_i4.base64.decode(
-    r'Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgICAgICAgID0gInByaXNtYS1jbGllbnQtZGFydCIKICBwcmV2aWV3RmVhdHVyZXMgPSBbImludGVyYWN0aXZlVHJhbnNhY3Rpb25zIl0KICBvdXRwdXQgICAgICAgICAgPSAiLi4vbGliL3ByaXNtYV9jbGllbnQuZGFydCIKfQoKZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAic3FsaXRlIgogIHVybCAgICAgID0gImZpbGU6Li9kZXYuZGIiCn0KCm1vZGVsIFVzZXIgewogIGlkICAgICAgICAgICAgSW50ICAgICAgICAgICBAaWQgQGRlZmF1bHQoYXV0b2luY3JlbWVudCgpKQogIGVtYWlsICAgICAgICAgU3RyaW5nCiAgcGFzc3dvcmRIYXNoICBTdHJpbmcKICBmaXJzdE5hbWUgICAgIFN0cmluZwogIGxhc3ROYW1lICAgICAgU3RyaW5nCiAgY3JlYXRlZEF0ICAgICBEYXRlVGltZSAgICAgIEBkZWZhdWx0KG5vdygpKQogIHVwZGF0ZWRBdCAgICAgRGF0ZVRpbWUgICAgICBAdXBkYXRlZEF0CiAgc2Vzc2lvbnMgICAgICBVc2VyU2Vzc2lvbltdCn0KCm1vZGVsIFVzZXJTZXNzaW9uIHsKICBpZCAgICAgICAgICAgIEludCAgICAgICAgICAgQGlkIEBkZWZhdWx0KGF1dG9pbmNyZW1lbnQoKSkKICB1c2VySWQgICAgICAgIEludAogIGFjY2Vzc1Rva2VuICAgU3RyaW5nCiAgcmVmcmVzaFRva2VuICBTdHJpbmcKICBleHBpcmVzQXQgICAgIERhdGVUaW1lCiAgY3JlYXRlZEF0ICAgICBEYXRlVGltZSAgICAgIEBkZWZhdWx0KG5vdygpKQogIHVwZGF0ZWRBdCAgICAgRGF0ZVRpbWUgICAgICBAdXBkYXRlZEF0CiAgCiAgdXNlciAgICAgICAgICBVc2VyICAgICAgICAgIEByZWxhdGlvbihmaWVsZHM6IFt1c2VySWRdLCByZWZlcmVuY2VzOiBbaWRdKQp9Cgptb2RlbCBMYXdzdWl0IHsKICBpZCAgICAgICAgICAgICAgICAgICAgICBJbnQgICAgICAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgc3ViamVjdElkICAgICAgICAgICAgICAgSW50ICAgICAgICAgICBAZGVmYXVsdCgtMSkKICBjbGFpbVR5cGUgICAgICAgICAgICAgICBJbnQgICAgICAgICAgIEBkZWZhdWx0KC0xKQogIGNsYWltVmFsdWUgICAgICAgICAgICAgIEZsb2F0ICAgICAgICAgQGRlZmF1bHQoLTEpCiAgc3VpbmdFbnRpdHlUeXBlICAgICAgICAgSW50ICAgICAgICAgICBAZGVmYXVsdCgwKQogIHN1aW5nRmlyc3ROYW1lICAgICAgICAgIFN0cmluZyAgICAgICAgQGRlZmF1bHQoIiIpCiAgc3VpbmdMYXN0TmFtZSAgICAgICAgICAgU3RyaW5nICAgICAgICBAZGVmYXVsdCgiIikKICBzdWluZ09yZ2FuaXphdGlvbk5hbWUgICBTdHJpbmcgICAgICAgIEBkZWZhdWx0KCIiKQogIHN1aW5nT3JnYW5pemF0aW9uTnVtYmVyIFN0cmluZyAgICAgICAgQGRlZmF1bHQoIiIpCiAgc3VpbmdBZGRyZXNzICAgICAgICAgICAgU3RyaW5nICAgICAgICBAZGVmYXVsdCgiIikKICBzdWluZ0NpdHkgICAgICAgICAgICAgICBTdHJpbmcgICAgICAgIEBkZWZhdWx0KCIiKQogIHN1aW5nUG9zdENvZGUgICAgICAgICAgIFN0cmluZyAgICAgICAgQGRlZmF1bHQoIiIpCn0KCg=='));
+    r'Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgICAgICAgID0gInByaXNtYS1jbGllbnQtZGFydCIKICBwcmV2aWV3RmVhdHVyZXMgPSBbImludGVyYWN0aXZlVHJhbnNhY3Rpb25zIl0KICBvdXRwdXQgICAgICAgICAgPSAiLi4vbGliL3ByaXNtYV9jbGllbnQuZGFydCIKfQoKZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAic3FsaXRlIgogIHVybCAgICAgID0gImZpbGU6Li9kZXYuZGIiCn0KCm1vZGVsIFVzZXIgewogIGlkICAgICAgICAgICAgSW50ICAgICAgICAgICBAaWQgQGRlZmF1bHQoYXV0b2luY3JlbWVudCgpKQogIGVtYWlsICAgICAgICAgU3RyaW5nCiAgcGFzc3dvcmRIYXNoICBTdHJpbmcKICBmaXJzdE5hbWUgICAgIFN0cmluZwogIGxhc3ROYW1lICAgICAgU3RyaW5nCiAgY3JlYXRlZEF0ICAgICBEYXRlVGltZSAgICAgIEBkZWZhdWx0KG5vdygpKQogIHVwZGF0ZWRBdCAgICAgRGF0ZVRpbWUgICAgICBAdXBkYXRlZEF0CiAgc2Vzc2lvbnMgICAgICBVc2VyU2Vzc2lvbltdCn0KCm1vZGVsIFVzZXJTZXNzaW9uIHsKICBpZCAgICAgICAgICAgIEludCAgICAgICAgICAgQGlkIEBkZWZhdWx0KGF1dG9pbmNyZW1lbnQoKSkKICB1c2VySWQgICAgICAgIEludAogIGFjY2Vzc1Rva2VuICAgU3RyaW5nCiAgcmVmcmVzaFRva2VuICBTdHJpbmcKICBleHBpcmVzQXQgICAgIERhdGVUaW1lCiAgY3JlYXRlZEF0ICAgICBEYXRlVGltZSAgICAgIEBkZWZhdWx0KG5vdygpKQogIHVwZGF0ZWRBdCAgICAgRGF0ZVRpbWUgICAgICBAdXBkYXRlZEF0CiAgCiAgdXNlciAgICAgICAgICBVc2VyICAgICAgICAgIEByZWxhdGlvbihmaWVsZHM6IFt1c2VySWRdLCByZWZlcmVuY2VzOiBbaWRdKQp9Cgptb2RlbCBMYXdzdWl0IHsKICBpZCAgICAgICAgICAgICAgICAgICAgICBJbnQgICAgICAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgdXNlcklkICAgICAgICAgICAgICAgICAgSW50ICAgICAgICAgICBAZGVmYXVsdCgtMSkKICBzdWJqZWN0SWQgICAgICAgICAgICAgICBJbnQgICAgICAgICAgIEBkZWZhdWx0KC0xKQogIGNsYWltVHlwZSAgICAgICAgICAgICAgIEludCAgICAgICAgICAgQGRlZmF1bHQoLTEpCiAgY2xhaW1WYWx1ZSAgICAgICAgICAgICAgRmxvYXQgICAgICAgICBAZGVmYXVsdCgtMSkKICBzdWluZ0VudGl0eVR5cGUgICAgICAgICBJbnQgICAgICAgICAgIEBkZWZhdWx0KDApCiAgc3VpbmdGaXJzdE5hbWUgICAgICAgICAgU3RyaW5nICAgICAgICBAZGVmYXVsdCgiIikKICBzdWluZ0xhc3ROYW1lICAgICAgICAgICBTdHJpbmcgICAgICAgIEBkZWZhdWx0KCIiKQogIHN1aW5nT3JnYW5pemF0aW9uTmFtZSAgIFN0cmluZyAgICAgICAgQGRlZmF1bHQoIiIpCiAgc3VpbmdPcmdhbml6YXRpb25OdW1iZXIgU3RyaW5nICAgICAgICBAZGVmYXVsdCgiIikKICBzdWluZ0FkZHJlc3MgICAgICAgICAgICBTdHJpbmcgICAgICAgIEBkZWZhdWx0KCIiKQogIHN1aW5nQ2l0eSAgICAgICAgICAgICAgIFN0cmluZyAgICAgICAgQGRlZmF1bHQoIiIpCiAgc3VpbmdQb3N0Q29kZSAgICAgICAgICAgU3RyaW5nICAgICAgICBAZGVmYXVsdCgiIikKfQoK'));
 const String _executable =
     r'D:\dart_projects\zloz_mnie\.dart_tool\prisma\query-engine';
 

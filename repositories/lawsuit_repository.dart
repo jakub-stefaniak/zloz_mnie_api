@@ -9,9 +9,34 @@ class LawsuitRepository {
 
   final PrismaClient prismaClient;
 
-  Future<Lawsuit> createLawsuit() async {
-    final lawsuit =
-        await prismaClient.lawsuit.create(data: LawsuitCreateInput());
+  Future<Lawsuit> getLawsuit(int id) async {
+    final lawsuit = await prismaClient.lawsuit.findFirst(
+      where: LawsuitWhereInput(
+        id: IntFilter(equals: id),
+      ),
+    );
+
+    if (lawsuit == null) throw ResourceNotFoundException();
+
+    return lawsuit;
+  }
+
+  Future<List<Lawsuit>> getLawsuits(int userId) async {
+    final lawsuits = await prismaClient.lawsuit.findMany(
+      where: LawsuitWhereInput(
+        userId: IntFilter(equals: userId),
+      ),
+    );
+
+    return lawsuits;
+  }
+
+  Future<Lawsuit> createLawsuit(int userId) async {
+    final lawsuit = await prismaClient.lawsuit.create(
+      data: LawsuitCreateInput(
+        userId: userId,
+      ),
+    );
 
     return lawsuit;
   }

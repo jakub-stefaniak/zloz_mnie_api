@@ -37,6 +37,7 @@ model UserSession {
 
 model Lawsuit {
   id                      Int           @id @default(autoincrement())
+  userId                  Int           @default(-1)
   subjectId               Int           @default(-1)
   claimType               Int           @default(-1)
   claimValue              Float         @default(-1)
