@@ -1,0 +1,20 @@
+name: zloz_mnie
+description: An API for zloz mnie project
+version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  dart_frog: ^0.1.2
+  http: ^0.13.4
+  json_annotation: ^4.7.0
+  orm: ^2.3.1
+
+dev_dependencies:
+  build_runner: ^2.2.0
+  json_serializable: ^6.5.1
+  mocktail: ^0.3.0
+  test: ^1.19.2
+  very_good_analysis: ^3.0.1
