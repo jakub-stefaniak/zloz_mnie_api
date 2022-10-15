@@ -172,6 +172,98 @@ Map<String, dynamic> _$UserSessionGroupByOutputTypeToJson(
       '_max': instance.$max?.toJson(),
     };
 
+AggregateLawsuit _$AggregateLawsuitFromJson(Map<String, dynamic> json) =>
+    AggregateLawsuit(
+      $count: json['_count'] == null
+          ? null
+          : LawsuitCountAggregateOutputType.fromJson(
+              json['_count'] as Map<String, dynamic>),
+      $avg: json['_avg'] == null
+          ? null
+          : LawsuitAvgAggregateOutputType.fromJson(
+              json['_avg'] as Map<String, dynamic>),
+      $sum: json['_sum'] == null
+          ? null
+          : LawsuitSumAggregateOutputType.fromJson(
+              json['_sum'] as Map<String, dynamic>),
+      $min: json['_min'] == null
+          ? null
+          : LawsuitMinAggregateOutputType.fromJson(
+              json['_min'] as Map<String, dynamic>),
+      $max: json['_max'] == null
+          ? null
+          : LawsuitMaxAggregateOutputType.fromJson(
+              json['_max'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$AggregateLawsuitToJson(AggregateLawsuit instance) =>
+    <String, dynamic>{
+      '_count': instance.$count?.toJson(),
+      '_avg': instance.$avg?.toJson(),
+      '_sum': instance.$sum?.toJson(),
+      '_min': instance.$min?.toJson(),
+      '_max': instance.$max?.toJson(),
+    };
+
+LawsuitGroupByOutputType _$LawsuitGroupByOutputTypeFromJson(
+        Map<String, dynamic> json) =>
+    LawsuitGroupByOutputType(
+      id: json['id'] as int,
+      subjectId: json['subjectId'] as int,
+      claimType: json['claimType'] as int,
+      claimValue: (json['claimValue'] as num).toDouble(),
+      suingEntityType: json['suingEntityType'] as int,
+      suingFirstName: json['suingFirstName'] as String,
+      suingLastName: json['suingLastName'] as String,
+      suingOrganizationName: json['suingOrganizationName'] as String,
+      suingOrganizationNumber: json['suingOrganizationNumber'] as String,
+      suingAddress: json['suingAddress'] as String,
+      suingCity: json['suingCity'] as String,
+      suingPostCode: json['suingPostCode'] as String,
+      $count: json['_count'] == null
+          ? null
+          : LawsuitCountAggregateOutputType.fromJson(
+              json['_count'] as Map<String, dynamic>),
+      $avg: json['_avg'] == null
+          ? null
+          : LawsuitAvgAggregateOutputType.fromJson(
+              json['_avg'] as Map<String, dynamic>),
+      $sum: json['_sum'] == null
+          ? null
+          : LawsuitSumAggregateOutputType.fromJson(
+              json['_sum'] as Map<String, dynamic>),
+      $min: json['_min'] == null
+          ? null
+          : LawsuitMinAggregateOutputType.fromJson(
+              json['_min'] as Map<String, dynamic>),
+      $max: json['_max'] == null
+          ? null
+          : LawsuitMaxAggregateOutputType.fromJson(
+              json['_max'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$LawsuitGroupByOutputTypeToJson(
+        LawsuitGroupByOutputType instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'subjectId': instance.subjectId,
+      'claimType': instance.claimType,
+      'claimValue': instance.claimValue,
+      'suingEntityType': instance.suingEntityType,
+      'suingFirstName': instance.suingFirstName,
+      'suingLastName': instance.suingLastName,
+      'suingOrganizationName': instance.suingOrganizationName,
+      'suingOrganizationNumber': instance.suingOrganizationNumber,
+      'suingAddress': instance.suingAddress,
+      'suingCity': instance.suingCity,
+      'suingPostCode': instance.suingPostCode,
+      '_count': instance.$count?.toJson(),
+      '_avg': instance.$avg?.toJson(),
+      '_sum': instance.$sum?.toJson(),
+      '_min': instance.$min?.toJson(),
+      '_max': instance.$max?.toJson(),
+    };
+
 AffectedRowsOutput _$AffectedRowsOutputFromJson(Map<String, dynamic> json) =>
     AffectedRowsOutput(
       count: json['count'] as int,
@@ -413,6 +505,150 @@ Map<String, dynamic> _$UserSessionMaxAggregateOutputTypeToJson(
       'updatedAt': instance.updatedAt?.toIso8601String(),
     };
 
+LawsuitCountAggregateOutputType _$LawsuitCountAggregateOutputTypeFromJson(
+        Map<String, dynamic> json) =>
+    LawsuitCountAggregateOutputType(
+      id: json['id'] as int,
+      subjectId: json['subjectId'] as int,
+      claimType: json['claimType'] as int,
+      claimValue: json['claimValue'] as int,
+      suingEntityType: json['suingEntityType'] as int,
+      suingFirstName: json['suingFirstName'] as int,
+      suingLastName: json['suingLastName'] as int,
+      suingOrganizationName: json['suingOrganizationName'] as int,
+      suingOrganizationNumber: json['suingOrganizationNumber'] as int,
+      suingAddress: json['suingAddress'] as int,
+      suingCity: json['suingCity'] as int,
+      suingPostCode: json['suingPostCode'] as int,
+      $all: json['_all'] as int,
+    );
+
+Map<String, dynamic> _$LawsuitCountAggregateOutputTypeToJson(
+        LawsuitCountAggregateOutputType instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'subjectId': instance.subjectId,
+      'claimType': instance.claimType,
+      'claimValue': instance.claimValue,
+      'suingEntityType': instance.suingEntityType,
+      'suingFirstName': instance.suingFirstName,
+      'suingLastName': instance.suingLastName,
+      'suingOrganizationName': instance.suingOrganizationName,
+      'suingOrganizationNumber': instance.suingOrganizationNumber,
+      'suingAddress': instance.suingAddress,
+      'suingCity': instance.suingCity,
+      'suingPostCode': instance.suingPostCode,
+      '_all': instance.$all,
+    };
+
+LawsuitAvgAggregateOutputType _$LawsuitAvgAggregateOutputTypeFromJson(
+        Map<String, dynamic> json) =>
+    LawsuitAvgAggregateOutputType(
+      id: (json['id'] as num?)?.toDouble(),
+      subjectId: (json['subjectId'] as num?)?.toDouble(),
+      claimType: (json['claimType'] as num?)?.toDouble(),
+      claimValue: (json['claimValue'] as num?)?.toDouble(),
+      suingEntityType: (json['suingEntityType'] as num?)?.toDouble(),
+    );
+
+Map<String, dynamic> _$LawsuitAvgAggregateOutputTypeToJson(
+        LawsuitAvgAggregateOutputType instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'subjectId': instance.subjectId,
+      'claimType': instance.claimType,
+      'claimValue': instance.claimValue,
+      'suingEntityType': instance.suingEntityType,
+    };
+
+LawsuitSumAggregateOutputType _$LawsuitSumAggregateOutputTypeFromJson(
+        Map<String, dynamic> json) =>
+    LawsuitSumAggregateOutputType(
+      id: json['id'] as int?,
+      subjectId: json['subjectId'] as int?,
+      claimType: json['claimType'] as int?,
+      claimValue: (json['claimValue'] as num?)?.toDouble(),
+      suingEntityType: json['suingEntityType'] as int?,
+    );
+
+Map<String, dynamic> _$LawsuitSumAggregateOutputTypeToJson(
+        LawsuitSumAggregateOutputType instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'subjectId': instance.subjectId,
+      'claimType': instance.claimType,
+      'claimValue': instance.claimValue,
+      'suingEntityType': instance.suingEntityType,
+    };
+
+LawsuitMinAggregateOutputType _$LawsuitMinAggregateOutputTypeFromJson(
+        Map<String, dynamic> json) =>
+    LawsuitMinAggregateOutputType(
+      id: json['id'] as int?,
+      subjectId: json['subjectId'] as int?,
+      claimType: json['claimType'] as int?,
+      claimValue: (json['claimValue'] as num?)?.toDouble(),
+      suingEntityType: json['suingEntityType'] as int?,
+      suingFirstName: json['suingFirstName'] as String?,
+      suingLastName: json['suingLastName'] as String?,
+      suingOrganizationName: json['suingOrganizationName'] as String?,
+      suingOrganizationNumber: json['suingOrganizationNumber'] as String?,
+      suingAddress: json['suingAddress'] as String?,
+      suingCity: json['suingCity'] as String?,
+      suingPostCode: json['suingPostCode'] as String?,
+    );
+
+Map<String, dynamic> _$LawsuitMinAggregateOutputTypeToJson(
+        LawsuitMinAggregateOutputType instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'subjectId': instance.subjectId,
+      'claimType': instance.claimType,
+      'claimValue': instance.claimValue,
+      'suingEntityType': instance.suingEntityType,
+      'suingFirstName': instance.suingFirstName,
+      'suingLastName': instance.suingLastName,
+      'suingOrganizationName': instance.suingOrganizationName,
+      'suingOrganizationNumber': instance.suingOrganizationNumber,
+      'suingAddress': instance.suingAddress,
+      'suingCity': instance.suingCity,
+      'suingPostCode': instance.suingPostCode,
+    };
+
+LawsuitMaxAggregateOutputType _$LawsuitMaxAggregateOutputTypeFromJson(
+        Map<String, dynamic> json) =>
+    LawsuitMaxAggregateOutputType(
+      id: json['id'] as int?,
+      subjectId: json['subjectId'] as int?,
+      claimType: json['claimType'] as int?,
+      claimValue: (json['claimValue'] as num?)?.toDouble(),
+      suingEntityType: json['suingEntityType'] as int?,
+      suingFirstName: json['suingFirstName'] as String?,
+      suingLastName: json['suingLastName'] as String?,
+      suingOrganizationName: json['suingOrganizationName'] as String?,
+      suingOrganizationNumber: json['suingOrganizationNumber'] as String?,
+      suingAddress: json['suingAddress'] as String?,
+      suingCity: json['suingCity'] as String?,
+      suingPostCode: json['suingPostCode'] as String?,
+    );
+
+Map<String, dynamic> _$LawsuitMaxAggregateOutputTypeToJson(
+        LawsuitMaxAggregateOutputType instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'subjectId': instance.subjectId,
+      'claimType': instance.claimType,
+      'claimValue': instance.claimValue,
+      'suingEntityType': instance.suingEntityType,
+      'suingFirstName': instance.suingFirstName,
+      'suingLastName': instance.suingLastName,
+      'suingOrganizationName': instance.suingOrganizationName,
+      'suingOrganizationNumber': instance.suingOrganizationNumber,
+      'suingAddress': instance.suingAddress,
+      'suingCity': instance.suingCity,
+      'suingPostCode': instance.suingPostCode,
+    };
+
 User _$UserFromJson(Map<String, dynamic> json) => User(
       id: json['id'] as int,
       email: json['email'] as String,
@@ -452,4 +688,34 @@ Map<String, dynamic> _$UserSessionToJson(UserSession instance) =>
       'expiresAt': instance.expiresAt.toIso8601String(),
       'createdAt': instance.createdAt.toIso8601String(),
       'updatedAt': instance.updatedAt.toIso8601String(),
+    };
+
+Lawsuit _$LawsuitFromJson(Map<String, dynamic> json) => Lawsuit(
+      id: json['id'] as int,
+      subjectId: json['subjectId'] as int,
+      claimType: json['claimType'] as int,
+      claimValue: (json['claimValue'] as num).toDouble(),
+      suingEntityType: json['suingEntityType'] as int,
+      suingFirstName: json['suingFirstName'] as String,
+      suingLastName: json['suingLastName'] as String,
+      suingOrganizationName: json['suingOrganizationName'] as String,
+      suingOrganizationNumber: json['suingOrganizationNumber'] as String,
+      suingAddress: json['suingAddress'] as String,
+      suingCity: json['suingCity'] as String,
+      suingPostCode: json['suingPostCode'] as String,
+    );
+
+Map<String, dynamic> _$LawsuitToJson(Lawsuit instance) => <String, dynamic>{
+      'id': instance.id,
+      'subjectId': instance.subjectId,
+      'claimType': instance.claimType,
+      'claimValue': instance.claimValue,
+      'suingEntityType': instance.suingEntityType,
+      'suingFirstName': instance.suingFirstName,
+      'suingLastName': instance.suingLastName,
+      'suingOrganizationName': instance.suingOrganizationName,
+      'suingOrganizationNumber': instance.suingOrganizationNumber,
+      'suingAddress': instance.suingAddress,
+      'suingCity': instance.suingCity,
+      'suingPostCode': instance.suingPostCode,
     };

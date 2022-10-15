@@ -1,6 +1,10 @@
+import 'dart:io';
+
 import 'package:dart_frog/dart_frog.dart';
 
-final subjects = [
+import '../../../models/error.dart';
+
+final _subjects = [
   {
     'id': 0,
     'title': 'Prawa niemajątkowe z roszczeniami majątkowymi',
@@ -44,6 +48,17 @@ final subjects = [
   }
 ];
 
-Response onRequest(RequestContext context) {
-  return Response.json(body: subjects);
+Response _get(RequestContext context) {
+  return Response.json(body: _subjects);
+}
+
+Future<Response> onRequest(RequestContext context) async {
+  if (context.request.method == HttpMethod.get) {
+    return _get(context);
+  }
+
+  return Response.json(
+    statusCode: HttpStatus.methodNotAllowed,
+    body: ServerError.methodNotAllowed(),
+  );
 }

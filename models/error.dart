@@ -43,6 +43,11 @@ class ServerError {
         message: 'Refresh token in invalid',
       );
 
+  factory ServerError.methodNotAllowed() => const ServerError(
+        code: 'MethodNotAllowedError',
+        message: 'Method not allowed',
+      );
+
   Map<String, dynamic> toJson() => <String, dynamic>{
         'code': code,
         'message': message,

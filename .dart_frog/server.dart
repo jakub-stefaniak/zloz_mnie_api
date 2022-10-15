@@ -7,12 +7,16 @@ import 'package:dart_frog/dart_frog.dart';
 
 
 import '../routes/index.dart' as index;
-import '../routes/lawsuit/subject/index.dart' as lawsuit_subject_index;
+import '../routes/lawsuit/index.dart' as lawsuit_index;
+import '../routes/lawsuit/[id].dart' as lawsuit_$id;
+import '../routes/lawsuit/subjects/index.dart' as lawsuit_subjects_index;
 import '../routes/auth/user/index.dart' as auth_user_index;
 import '../routes/auth/refresh/index.dart' as auth_refresh_index;
 import '../routes/auth/login/index.dart' as auth_login_index;
 
 import '../routes/_middleware.dart' as middleware;
+import '../routes/lawsuit/_middleware.dart' as lawsuit_middleware;
+import '../routes/lawsuit/subjects/_middleware.dart' as lawsuit_subjects_middleware;
 import '../routes/auth/user/_middleware.dart' as auth_user_middleware;
 import '../routes/auth/refresh/_middleware.dart' as auth_refresh_middleware;
 import '../routes/auth/login/_middleware.dart' as auth_login_middleware;
@@ -33,7 +37,7 @@ Handler buildRootHandler() {
     ..mount('/auth/refresh', (ctx, ) => buildAuthRefreshHandler()(ctx))
     ..mount('/auth/user', (ctx, ) => buildAuthUserHandler()(ctx))
     ..mount('/auth', (ctx, ) => buildAuthHandler()(ctx))
-    ..mount('/lawsuit/subject', (ctx, ) => buildLawsuitSubjectHandler()(ctx))
+    ..mount('/lawsuit/subjects', (ctx, ) => buildLawsuitSubjectsHandler()(ctx))
     ..mount('/lawsuit', (ctx, ) => buildLawsuitHandler()(ctx))
     ..mount('/', (ctx, ) => buildHandler()(ctx));
   return pipeline.addHandler(router);
@@ -67,17 +71,17 @@ Handler buildAuthHandler() {
   return pipeline.addHandler(router);
 }
 
-Handler buildLawsuitSubjectHandler() {
-  const pipeline = Pipeline();
+Handler buildLawsuitSubjectsHandler() {
+  final pipeline = const Pipeline().addMiddleware(lawsuit_subjects_middleware.middleware);
   final router = Router()
-    ..all('/', (ctx,) => lawsuit_subject_index.onRequest(ctx, ));
+    ..all('/', (ctx,) => lawsuit_subjects_index.onRequest(ctx, ));
   return pipeline.addHandler(router);
 }
 
 Handler buildLawsuitHandler() {
-  const pipeline = Pipeline();
+  final pipeline = const Pipeline().addMiddleware(lawsuit_middleware.middleware);
   final router = Router()
-    ;
+    ..all('/', (ctx,) => lawsuit_index.onRequest(ctx, ))..all('/<id>', (ctx,id,) => lawsuit_$id.onRequest(ctx, id,));
   return pipeline.addHandler(router);
 }
 

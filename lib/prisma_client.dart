@@ -20,6 +20,21 @@ part 'prisma_client.g.dart';
 // GitHub: https://github.com/odroe/prisma-dart
 //******************************************************************************
 
+enum LawsuitScalarFieldEnum {
+  id,
+  subjectId,
+  claimType,
+  claimValue,
+  suingEntityType,
+  suingFirstName,
+  suingLastName,
+  suingOrganizationName,
+  suingOrganizationNumber,
+  suingAddress,
+  suingCity,
+  suingPostCode
+}
+
 enum SortOrder { asc, desc }
 
 enum UserScalarFieldEnum {
@@ -485,6 +500,299 @@ class UserSessionScalarWhereWithAggregatesInput
   }
 }
 
+class LawsuitWhereInput implements _i1.JsonSerializable {
+  const LawsuitWhereInput({
+    this.AND,
+    this.OR,
+    this.NOT,
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<LawsuitWhereInput> AND;
+
+  final _i1.PrismaNullable<List<LawsuitWhereInput>> OR;
+
+  final _i1.PrismaNullable<LawsuitWhereInput> NOT;
+
+  final _i1.PrismaNullable<IntFilter> id;
+
+  final _i1.PrismaNullable<IntFilter> subjectId;
+
+  final _i1.PrismaNullable<IntFilter> claimType;
+
+  final _i1.PrismaNullable<FloatFilter> claimValue;
+
+  final _i1.PrismaNullable<IntFilter> suingEntityType;
+
+  final _i1.PrismaNullable<StringFilter> suingFirstName;
+
+  final _i1.PrismaNullable<StringFilter> suingLastName;
+
+  final _i1.PrismaNullable<StringFilter> suingOrganizationName;
+
+  final _i1.PrismaNullable<StringFilter> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<StringFilter> suingAddress;
+
+  final _i1.PrismaNullable<StringFilter> suingCity;
+
+  final _i1.PrismaNullable<StringFilter> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'AND': AND,
+      'OR': OR,
+      'NOT': NOT,
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitOrderByWithRelationInput implements _i1.JsonSerializable {
+  const LawsuitOrderByWithRelationInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> subjectId;
+
+  final _i1.PrismaNullable<SortOrder> claimType;
+
+  final _i1.PrismaNullable<SortOrder> claimValue;
+
+  final _i1.PrismaNullable<SortOrder> suingEntityType;
+
+  final _i1.PrismaNullable<SortOrder> suingFirstName;
+
+  final _i1.PrismaNullable<SortOrder> suingLastName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<SortOrder> suingAddress;
+
+  final _i1.PrismaNullable<SortOrder> suingCity;
+
+  final _i1.PrismaNullable<SortOrder> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitWhereUniqueInput implements _i1.JsonSerializable {
+  const LawsuitWhereUniqueInput({this.id});
+
+  final _i1.PrismaNullable<int> id;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+    };
+  }
+}
+
+class LawsuitOrderByWithAggregationInput implements _i1.JsonSerializable {
+  const LawsuitOrderByWithAggregationInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+    this.$count,
+    this.$avg,
+    this.$max,
+    this.$min,
+    this.$sum,
+  });
+
+  final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> subjectId;
+
+  final _i1.PrismaNullable<SortOrder> claimType;
+
+  final _i1.PrismaNullable<SortOrder> claimValue;
+
+  final _i1.PrismaNullable<SortOrder> suingEntityType;
+
+  final _i1.PrismaNullable<SortOrder> suingFirstName;
+
+  final _i1.PrismaNullable<SortOrder> suingLastName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<SortOrder> suingAddress;
+
+  final _i1.PrismaNullable<SortOrder> suingCity;
+
+  final _i1.PrismaNullable<SortOrder> suingPostCode;
+
+  final _i1.PrismaNullable<LawsuitCountOrderByAggregateInput> $count;
+
+  final _i1.PrismaNullable<LawsuitAvgOrderByAggregateInput> $avg;
+
+  final _i1.PrismaNullable<LawsuitMaxOrderByAggregateInput> $max;
+
+  final _i1.PrismaNullable<LawsuitMinOrderByAggregateInput> $min;
+
+  final _i1.PrismaNullable<LawsuitSumOrderByAggregateInput> $sum;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+      '_count': $count,
+      '_avg': $avg,
+      '_max': $max,
+      '_min': $min,
+      '_sum': $sum,
+    };
+  }
+}
+
+class LawsuitScalarWhereWithAggregatesInput implements _i1.JsonSerializable {
+  const LawsuitScalarWhereWithAggregatesInput({
+    this.AND,
+    this.OR,
+    this.NOT,
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<LawsuitScalarWhereWithAggregatesInput> AND;
+
+  final _i1.PrismaNullable<List<LawsuitScalarWhereWithAggregatesInput>> OR;
+
+  final _i1.PrismaNullable<LawsuitScalarWhereWithAggregatesInput> NOT;
+
+  final _i1.PrismaNullable<IntWithAggregatesFilter> id;
+
+  final _i1.PrismaNullable<IntWithAggregatesFilter> subjectId;
+
+  final _i1.PrismaNullable<IntWithAggregatesFilter> claimType;
+
+  final _i1.PrismaNullable<FloatWithAggregatesFilter> claimValue;
+
+  final _i1.PrismaNullable<IntWithAggregatesFilter> suingEntityType;
+
+  final _i1.PrismaNullable<StringWithAggregatesFilter> suingFirstName;
+
+  final _i1.PrismaNullable<StringWithAggregatesFilter> suingLastName;
+
+  final _i1.PrismaNullable<StringWithAggregatesFilter> suingOrganizationName;
+
+  final _i1.PrismaNullable<StringWithAggregatesFilter> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<StringWithAggregatesFilter> suingAddress;
+
+  final _i1.PrismaNullable<StringWithAggregatesFilter> suingCity;
+
+  final _i1.PrismaNullable<StringWithAggregatesFilter> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'AND': AND,
+      'OR': OR,
+      'NOT': NOT,
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
 class UserCreateInput implements _i1.JsonSerializable {
   const UserCreateInput({
     required this.email,
@@ -942,6 +1250,356 @@ class UserSessionUncheckedUpdateManyInput implements _i1.JsonSerializable {
       'expiresAt': expiresAt,
       'createdAt': createdAt,
       'updatedAt': updatedAt,
+    };
+  }
+}
+
+class LawsuitCreateInput implements _i1.JsonSerializable {
+  const LawsuitCreateInput({
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<int> subjectId;
+
+  final _i1.PrismaNullable<int> claimType;
+
+  final _i1.PrismaNullable<double> claimValue;
+
+  final _i1.PrismaNullable<int> suingEntityType;
+
+  final _i1.PrismaNullable<String> suingFirstName;
+
+  final _i1.PrismaNullable<String> suingLastName;
+
+  final _i1.PrismaNullable<String> suingOrganizationName;
+
+  final _i1.PrismaNullable<String> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<String> suingAddress;
+
+  final _i1.PrismaNullable<String> suingCity;
+
+  final _i1.PrismaNullable<String> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitUncheckedCreateInput implements _i1.JsonSerializable {
+  const LawsuitUncheckedCreateInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<int> id;
+
+  final _i1.PrismaNullable<int> subjectId;
+
+  final _i1.PrismaNullable<int> claimType;
+
+  final _i1.PrismaNullable<double> claimValue;
+
+  final _i1.PrismaNullable<int> suingEntityType;
+
+  final _i1.PrismaNullable<String> suingFirstName;
+
+  final _i1.PrismaNullable<String> suingLastName;
+
+  final _i1.PrismaNullable<String> suingOrganizationName;
+
+  final _i1.PrismaNullable<String> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<String> suingAddress;
+
+  final _i1.PrismaNullable<String> suingCity;
+
+  final _i1.PrismaNullable<String> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitUpdateInput implements _i1.JsonSerializable {
+  const LawsuitUpdateInput({
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> subjectId;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> claimType;
+
+  final _i1.PrismaNullable<FloatFieldUpdateOperationsInput> claimValue;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> suingEntityType;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingFirstName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingLastName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput>
+      suingOrganizationName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput>
+      suingOrganizationNumber;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingAddress;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingCity;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitUncheckedUpdateInput implements _i1.JsonSerializable {
+  const LawsuitUncheckedUpdateInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> id;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> subjectId;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> claimType;
+
+  final _i1.PrismaNullable<FloatFieldUpdateOperationsInput> claimValue;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> suingEntityType;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingFirstName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingLastName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput>
+      suingOrganizationName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput>
+      suingOrganizationNumber;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingAddress;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingCity;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitUpdateManyMutationInput implements _i1.JsonSerializable {
+  const LawsuitUpdateManyMutationInput({
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> subjectId;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> claimType;
+
+  final _i1.PrismaNullable<FloatFieldUpdateOperationsInput> claimValue;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> suingEntityType;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingFirstName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingLastName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput>
+      suingOrganizationName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput>
+      suingOrganizationNumber;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingAddress;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingCity;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitUncheckedUpdateManyInput implements _i1.JsonSerializable {
+  const LawsuitUncheckedUpdateManyInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> id;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> subjectId;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> claimType;
+
+  final _i1.PrismaNullable<FloatFieldUpdateOperationsInput> claimValue;
+
+  final _i1.PrismaNullable<IntFieldUpdateOperationsInput> suingEntityType;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingFirstName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingLastName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput>
+      suingOrganizationName;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput>
+      suingOrganizationNumber;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingAddress;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingCity;
+
+  final _i1.PrismaNullable<StringFieldUpdateOperationsInput> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
     };
   }
 }
@@ -1625,6 +2283,351 @@ class UserSessionSumOrderByAggregateInput implements _i1.JsonSerializable {
   }
 }
 
+class FloatFilter implements _i1.JsonSerializable {
+  const FloatFilter({
+    this.equals,
+    this.in$,
+    this.notIn,
+    this.lt,
+    this.lte,
+    this.gt,
+    this.gte,
+    this.not,
+  });
+
+  final _i1.PrismaNullable<double> equals;
+
+  final _i1.PrismaNullable<List<double>> in$;
+
+  final _i1.PrismaNullable<List<double>> notIn;
+
+  final _i1.PrismaNullable<double> lt;
+
+  final _i1.PrismaNullable<double> lte;
+
+  final _i1.PrismaNullable<double> gt;
+
+  final _i1.PrismaNullable<double> gte;
+
+  final _i1.PrismaNullable<NestedFloatFilter> not;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'equals': equals,
+      'in': in$,
+      'notIn': notIn,
+      'lt': lt,
+      'lte': lte,
+      'gt': gt,
+      'gte': gte,
+      'not': not,
+    };
+  }
+}
+
+class LawsuitCountOrderByAggregateInput implements _i1.JsonSerializable {
+  const LawsuitCountOrderByAggregateInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> subjectId;
+
+  final _i1.PrismaNullable<SortOrder> claimType;
+
+  final _i1.PrismaNullable<SortOrder> claimValue;
+
+  final _i1.PrismaNullable<SortOrder> suingEntityType;
+
+  final _i1.PrismaNullable<SortOrder> suingFirstName;
+
+  final _i1.PrismaNullable<SortOrder> suingLastName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<SortOrder> suingAddress;
+
+  final _i1.PrismaNullable<SortOrder> suingCity;
+
+  final _i1.PrismaNullable<SortOrder> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitAvgOrderByAggregateInput implements _i1.JsonSerializable {
+  const LawsuitAvgOrderByAggregateInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+  });
+
+  final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> subjectId;
+
+  final _i1.PrismaNullable<SortOrder> claimType;
+
+  final _i1.PrismaNullable<SortOrder> claimValue;
+
+  final _i1.PrismaNullable<SortOrder> suingEntityType;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+    };
+  }
+}
+
+class LawsuitMaxOrderByAggregateInput implements _i1.JsonSerializable {
+  const LawsuitMaxOrderByAggregateInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> subjectId;
+
+  final _i1.PrismaNullable<SortOrder> claimType;
+
+  final _i1.PrismaNullable<SortOrder> claimValue;
+
+  final _i1.PrismaNullable<SortOrder> suingEntityType;
+
+  final _i1.PrismaNullable<SortOrder> suingFirstName;
+
+  final _i1.PrismaNullable<SortOrder> suingLastName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<SortOrder> suingAddress;
+
+  final _i1.PrismaNullable<SortOrder> suingCity;
+
+  final _i1.PrismaNullable<SortOrder> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitMinOrderByAggregateInput implements _i1.JsonSerializable {
+  const LawsuitMinOrderByAggregateInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> subjectId;
+
+  final _i1.PrismaNullable<SortOrder> claimType;
+
+  final _i1.PrismaNullable<SortOrder> claimValue;
+
+  final _i1.PrismaNullable<SortOrder> suingEntityType;
+
+  final _i1.PrismaNullable<SortOrder> suingFirstName;
+
+  final _i1.PrismaNullable<SortOrder> suingLastName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationName;
+
+  final _i1.PrismaNullable<SortOrder> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<SortOrder> suingAddress;
+
+  final _i1.PrismaNullable<SortOrder> suingCity;
+
+  final _i1.PrismaNullable<SortOrder> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+      'suingFirstName': suingFirstName,
+      'suingLastName': suingLastName,
+      'suingOrganizationName': suingOrganizationName,
+      'suingOrganizationNumber': suingOrganizationNumber,
+      'suingAddress': suingAddress,
+      'suingCity': suingCity,
+      'suingPostCode': suingPostCode,
+    };
+  }
+}
+
+class LawsuitSumOrderByAggregateInput implements _i1.JsonSerializable {
+  const LawsuitSumOrderByAggregateInput({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+  });
+
+  final _i1.PrismaNullable<SortOrder> id;
+
+  final _i1.PrismaNullable<SortOrder> subjectId;
+
+  final _i1.PrismaNullable<SortOrder> claimType;
+
+  final _i1.PrismaNullable<SortOrder> claimValue;
+
+  final _i1.PrismaNullable<SortOrder> suingEntityType;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'id': id,
+      'subjectId': subjectId,
+      'claimType': claimType,
+      'claimValue': claimValue,
+      'suingEntityType': suingEntityType,
+    };
+  }
+}
+
+class FloatWithAggregatesFilter implements _i1.JsonSerializable {
+  const FloatWithAggregatesFilter({
+    this.equals,
+    this.in$,
+    this.notIn,
+    this.lt,
+    this.lte,
+    this.gt,
+    this.gte,
+    this.not,
+    this.$count,
+    this.$avg,
+    this.$sum,
+    this.$min,
+    this.$max,
+  });
+
+  final _i1.PrismaNullable<double> equals;
+
+  final _i1.PrismaNullable<List<double>> in$;
+
+  final _i1.PrismaNullable<List<double>> notIn;
+
+  final _i1.PrismaNullable<double> lt;
+
+  final _i1.PrismaNullable<double> lte;
+
+  final _i1.PrismaNullable<double> gt;
+
+  final _i1.PrismaNullable<double> gte;
+
+  final _i1.PrismaNullable<NestedFloatWithAggregatesFilter> not;
+
+  final _i1.PrismaNullable<NestedIntFilter> $count;
+
+  final _i1.PrismaNullable<NestedFloatFilter> $avg;
+
+  final _i1.PrismaNullable<NestedFloatFilter> $sum;
+
+  final _i1.PrismaNullable<NestedFloatFilter> $min;
+
+  final _i1.PrismaNullable<NestedFloatFilter> $max;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'equals': equals,
+      'in': in$,
+      'notIn': notIn,
+      'lt': lt,
+      'lte': lte,
+      'gt': gt,
+      'gte': gte,
+      'not': not,
+      '_count': $count,
+      '_avg': $avg,
+      '_sum': $sum,
+      '_min': $min,
+      '_max': $max,
+    };
+  }
+}
+
 class UserSessionCreateNestedManyWithoutUserInput
     implements _i1.JsonSerializable {
   const UserSessionCreateNestedManyWithoutUserInput({
@@ -1897,6 +2900,37 @@ class UserUpdateOneRequiredWithoutSessionsNestedInput
       'upsert': upsert,
       'connect': connect,
       'update': update,
+    };
+  }
+}
+
+class FloatFieldUpdateOperationsInput implements _i1.JsonSerializable {
+  const FloatFieldUpdateOperationsInput({
+    this.set$,
+    this.increment,
+    this.decrement,
+    this.multiply,
+    this.divide,
+  });
+
+  final _i1.PrismaNullable<double> set$;
+
+  final _i1.PrismaNullable<double> increment;
+
+  final _i1.PrismaNullable<double> decrement;
+
+  final _i1.PrismaNullable<double> multiply;
+
+  final _i1.PrismaNullable<double> divide;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'set': set$,
+      'increment': increment,
+      'decrement': decrement,
+      'multiply': multiply,
+      'divide': divide,
     };
   }
 }
@@ -2264,6 +3298,69 @@ class NestedDateTimeWithAggregatesFilter implements _i1.JsonSerializable {
       'gte': gte,
       'not': not,
       '_count': $count,
+      '_min': $min,
+      '_max': $max,
+    };
+  }
+}
+
+class NestedFloatWithAggregatesFilter implements _i1.JsonSerializable {
+  const NestedFloatWithAggregatesFilter({
+    this.equals,
+    this.in$,
+    this.notIn,
+    this.lt,
+    this.lte,
+    this.gt,
+    this.gte,
+    this.not,
+    this.$count,
+    this.$avg,
+    this.$sum,
+    this.$min,
+    this.$max,
+  });
+
+  final _i1.PrismaNullable<double> equals;
+
+  final _i1.PrismaNullable<List<double>> in$;
+
+  final _i1.PrismaNullable<List<double>> notIn;
+
+  final _i1.PrismaNullable<double> lt;
+
+  final _i1.PrismaNullable<double> lte;
+
+  final _i1.PrismaNullable<double> gt;
+
+  final _i1.PrismaNullable<double> gte;
+
+  final _i1.PrismaNullable<NestedFloatWithAggregatesFilter> not;
+
+  final _i1.PrismaNullable<NestedIntFilter> $count;
+
+  final _i1.PrismaNullable<NestedFloatFilter> $avg;
+
+  final _i1.PrismaNullable<NestedFloatFilter> $sum;
+
+  final _i1.PrismaNullable<NestedFloatFilter> $min;
+
+  final _i1.PrismaNullable<NestedFloatFilter> $max;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'equals': equals,
+      'in': in$,
+      'notIn': notIn,
+      'lt': lt,
+      'lte': lte,
+      'gt': gt,
+      'gte': gte,
+      'not': not,
+      '_count': $count,
+      '_avg': $avg,
+      '_sum': $sum,
       '_min': $min,
       '_max': $max,
     };
@@ -2952,6 +4049,114 @@ class UserSessionGroupByOutputType implements _i1.JsonSerializable {
   createFactory: true,
   explicitToJson: true,
 )
+class AggregateLawsuit implements _i1.JsonSerializable {
+  const AggregateLawsuit({
+    this.$count,
+    this.$avg,
+    this.$sum,
+    this.$min,
+    this.$max,
+  });
+
+  factory AggregateLawsuit.fromJson(Map<String, dynamic> json) =>
+      _$AggregateLawsuitFromJson(json);
+
+  @_i2.JsonKey(name: '_count')
+  final _i1.PrismaNullable<LawsuitCountAggregateOutputType> $count;
+
+  @_i2.JsonKey(name: '_avg')
+  final _i1.PrismaNullable<LawsuitAvgAggregateOutputType> $avg;
+
+  @_i2.JsonKey(name: '_sum')
+  final _i1.PrismaNullable<LawsuitSumAggregateOutputType> $sum;
+
+  @_i2.JsonKey(name: '_min')
+  final _i1.PrismaNullable<LawsuitMinAggregateOutputType> $min;
+
+  @_i2.JsonKey(name: '_max')
+  final _i1.PrismaNullable<LawsuitMaxAggregateOutputType> $max;
+
+  @override
+  Map<String, dynamic> toJson() => _$AggregateLawsuitToJson(this);
+}
+
+@_i2.JsonSerializable(
+  createToJson: true,
+  createFactory: true,
+  explicitToJson: true,
+)
+class LawsuitGroupByOutputType implements _i1.JsonSerializable {
+  const LawsuitGroupByOutputType({
+    required this.id,
+    required this.subjectId,
+    required this.claimType,
+    required this.claimValue,
+    required this.suingEntityType,
+    required this.suingFirstName,
+    required this.suingLastName,
+    required this.suingOrganizationName,
+    required this.suingOrganizationNumber,
+    required this.suingAddress,
+    required this.suingCity,
+    required this.suingPostCode,
+    this.$count,
+    this.$avg,
+    this.$sum,
+    this.$min,
+    this.$max,
+  });
+
+  factory LawsuitGroupByOutputType.fromJson(Map<String, dynamic> json) =>
+      _$LawsuitGroupByOutputTypeFromJson(json);
+
+  final int id;
+
+  final int subjectId;
+
+  final int claimType;
+
+  final double claimValue;
+
+  final int suingEntityType;
+
+  final String suingFirstName;
+
+  final String suingLastName;
+
+  final String suingOrganizationName;
+
+  final String suingOrganizationNumber;
+
+  final String suingAddress;
+
+  final String suingCity;
+
+  final String suingPostCode;
+
+  @_i2.JsonKey(name: '_count')
+  final _i1.PrismaNullable<LawsuitCountAggregateOutputType> $count;
+
+  @_i2.JsonKey(name: '_avg')
+  final _i1.PrismaNullable<LawsuitAvgAggregateOutputType> $avg;
+
+  @_i2.JsonKey(name: '_sum')
+  final _i1.PrismaNullable<LawsuitSumAggregateOutputType> $sum;
+
+  @_i2.JsonKey(name: '_min')
+  final _i1.PrismaNullable<LawsuitMinAggregateOutputType> $min;
+
+  @_i2.JsonKey(name: '_max')
+  final _i1.PrismaNullable<LawsuitMaxAggregateOutputType> $max;
+
+  @override
+  Map<String, dynamic> toJson() => _$LawsuitGroupByOutputTypeToJson(this);
+}
+
+@_i2.JsonSerializable(
+  createToJson: true,
+  createFactory: true,
+  explicitToJson: true,
+)
 class AffectedRowsOutput implements _i1.JsonSerializable {
   const AffectedRowsOutput({required this.count});
 
@@ -3304,6 +4509,229 @@ class UserSessionMaxAggregateOutputType implements _i1.JsonSerializable {
   createFactory: true,
   explicitToJson: true,
 )
+class LawsuitCountAggregateOutputType implements _i1.JsonSerializable {
+  const LawsuitCountAggregateOutputType({
+    required this.id,
+    required this.subjectId,
+    required this.claimType,
+    required this.claimValue,
+    required this.suingEntityType,
+    required this.suingFirstName,
+    required this.suingLastName,
+    required this.suingOrganizationName,
+    required this.suingOrganizationNumber,
+    required this.suingAddress,
+    required this.suingCity,
+    required this.suingPostCode,
+    required this.$all,
+  });
+
+  factory LawsuitCountAggregateOutputType.fromJson(Map<String, dynamic> json) =>
+      _$LawsuitCountAggregateOutputTypeFromJson(json);
+
+  final int id;
+
+  final int subjectId;
+
+  final int claimType;
+
+  final int claimValue;
+
+  final int suingEntityType;
+
+  final int suingFirstName;
+
+  final int suingLastName;
+
+  final int suingOrganizationName;
+
+  final int suingOrganizationNumber;
+
+  final int suingAddress;
+
+  final int suingCity;
+
+  final int suingPostCode;
+
+  @_i2.JsonKey(name: '_all')
+  final int $all;
+
+  @override
+  Map<String, dynamic> toJson() =>
+      _$LawsuitCountAggregateOutputTypeToJson(this);
+}
+
+@_i2.JsonSerializable(
+  createToJson: true,
+  createFactory: true,
+  explicitToJson: true,
+)
+class LawsuitAvgAggregateOutputType implements _i1.JsonSerializable {
+  const LawsuitAvgAggregateOutputType({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+  });
+
+  factory LawsuitAvgAggregateOutputType.fromJson(Map<String, dynamic> json) =>
+      _$LawsuitAvgAggregateOutputTypeFromJson(json);
+
+  final _i1.PrismaNullable<double> id;
+
+  final _i1.PrismaNullable<double> subjectId;
+
+  final _i1.PrismaNullable<double> claimType;
+
+  final _i1.PrismaNullable<double> claimValue;
+
+  final _i1.PrismaNullable<double> suingEntityType;
+
+  @override
+  Map<String, dynamic> toJson() => _$LawsuitAvgAggregateOutputTypeToJson(this);
+}
+
+@_i2.JsonSerializable(
+  createToJson: true,
+  createFactory: true,
+  explicitToJson: true,
+)
+class LawsuitSumAggregateOutputType implements _i1.JsonSerializable {
+  const LawsuitSumAggregateOutputType({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+  });
+
+  factory LawsuitSumAggregateOutputType.fromJson(Map<String, dynamic> json) =>
+      _$LawsuitSumAggregateOutputTypeFromJson(json);
+
+  final _i1.PrismaNullable<int> id;
+
+  final _i1.PrismaNullable<int> subjectId;
+
+  final _i1.PrismaNullable<int> claimType;
+
+  final _i1.PrismaNullable<double> claimValue;
+
+  final _i1.PrismaNullable<int> suingEntityType;
+
+  @override
+  Map<String, dynamic> toJson() => _$LawsuitSumAggregateOutputTypeToJson(this);
+}
+
+@_i2.JsonSerializable(
+  createToJson: true,
+  createFactory: true,
+  explicitToJson: true,
+)
+class LawsuitMinAggregateOutputType implements _i1.JsonSerializable {
+  const LawsuitMinAggregateOutputType({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  factory LawsuitMinAggregateOutputType.fromJson(Map<String, dynamic> json) =>
+      _$LawsuitMinAggregateOutputTypeFromJson(json);
+
+  final _i1.PrismaNullable<int> id;
+
+  final _i1.PrismaNullable<int> subjectId;
+
+  final _i1.PrismaNullable<int> claimType;
+
+  final _i1.PrismaNullable<double> claimValue;
+
+  final _i1.PrismaNullable<int> suingEntityType;
+
+  final _i1.PrismaNullable<String> suingFirstName;
+
+  final _i1.PrismaNullable<String> suingLastName;
+
+  final _i1.PrismaNullable<String> suingOrganizationName;
+
+  final _i1.PrismaNullable<String> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<String> suingAddress;
+
+  final _i1.PrismaNullable<String> suingCity;
+
+  final _i1.PrismaNullable<String> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() => _$LawsuitMinAggregateOutputTypeToJson(this);
+}
+
+@_i2.JsonSerializable(
+  createToJson: true,
+  createFactory: true,
+  explicitToJson: true,
+)
+class LawsuitMaxAggregateOutputType implements _i1.JsonSerializable {
+  const LawsuitMaxAggregateOutputType({
+    this.id,
+    this.subjectId,
+    this.claimType,
+    this.claimValue,
+    this.suingEntityType,
+    this.suingFirstName,
+    this.suingLastName,
+    this.suingOrganizationName,
+    this.suingOrganizationNumber,
+    this.suingAddress,
+    this.suingCity,
+    this.suingPostCode,
+  });
+
+  factory LawsuitMaxAggregateOutputType.fromJson(Map<String, dynamic> json) =>
+      _$LawsuitMaxAggregateOutputTypeFromJson(json);
+
+  final _i1.PrismaNullable<int> id;
+
+  final _i1.PrismaNullable<int> subjectId;
+
+  final _i1.PrismaNullable<int> claimType;
+
+  final _i1.PrismaNullable<double> claimValue;
+
+  final _i1.PrismaNullable<int> suingEntityType;
+
+  final _i1.PrismaNullable<String> suingFirstName;
+
+  final _i1.PrismaNullable<String> suingLastName;
+
+  final _i1.PrismaNullable<String> suingOrganizationName;
+
+  final _i1.PrismaNullable<String> suingOrganizationNumber;
+
+  final _i1.PrismaNullable<String> suingAddress;
+
+  final _i1.PrismaNullable<String> suingCity;
+
+  final _i1.PrismaNullable<String> suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() => _$LawsuitMaxAggregateOutputTypeToJson(this);
+}
+
+@_i2.JsonSerializable(
+  createToJson: true,
+  createFactory: true,
+  explicitToJson: true,
+)
 class User implements _i1.JsonSerializable {
   const User({
     required this.id,
@@ -3370,6 +4798,58 @@ class UserSession implements _i1.JsonSerializable {
 
   @override
   Map<String, dynamic> toJson() => _$UserSessionToJson(this);
+}
+
+@_i2.JsonSerializable(
+  createToJson: true,
+  createFactory: true,
+  explicitToJson: true,
+)
+class Lawsuit implements _i1.JsonSerializable {
+  const Lawsuit({
+    required this.id,
+    required this.subjectId,
+    required this.claimType,
+    required this.claimValue,
+    required this.suingEntityType,
+    required this.suingFirstName,
+    required this.suingLastName,
+    required this.suingOrganizationName,
+    required this.suingOrganizationNumber,
+    required this.suingAddress,
+    required this.suingCity,
+    required this.suingPostCode,
+  });
+
+  factory Lawsuit.fromJson(Map<String, dynamic> json) =>
+      _$LawsuitFromJson(json);
+
+  final int id;
+
+  final int subjectId;
+
+  final int claimType;
+
+  final double claimValue;
+
+  final int suingEntityType;
+
+  final String suingFirstName;
+
+  final String suingLastName;
+
+  final String suingOrganizationName;
+
+  final String suingOrganizationNumber;
+
+  final String suingAddress;
+
+  final String suingCity;
+
+  final String suingPostCode;
+
+  @override
+  Map<String, dynamic> toJson() => _$LawsuitToJson(this);
 }
 
 class UserDelegate {
@@ -4337,6 +5817,486 @@ class UserSessionDelegate {
   }
 }
 
+class LawsuitDelegate {
+  const LawsuitDelegate._(
+    this._engine, [
+    this._headers,
+  ]);
+
+  final _i1.Engine _engine;
+
+  final _i1.PrismaNullable<_i1.QueryEngineRequestHeaders> _headers;
+
+  Future<_i1.PrismaNullable<Lawsuit>> findUnique(
+      {required LawsuitWhereUniqueInput where}) async {
+    final String sdl = _i1.GraphQLField(
+      'query',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'findUniqueLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: true,
+            )
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return result.data['findUniqueLawsuit'] == null
+        ? null
+        : Lawsuit.fromJson((result.data['findUniqueLawsuit'] as Map).cast());
+  }
+
+  Future<_i1.PrismaNullable<Lawsuit>> findFirst({
+    _i1.PrismaNullable<LawsuitWhereInput> where,
+    _i1.PrismaNullable<List<LawsuitOrderByWithRelationInput>> orderBy,
+    _i1.PrismaNullable<LawsuitWhereUniqueInput> cursor,
+    _i1.PrismaNullable<int> take,
+    _i1.PrismaNullable<int> skip,
+    _i1.PrismaNullable<List<LawsuitScalarFieldEnum>> distinct,
+  }) async {
+    final String sdl = _i1.GraphQLField(
+      'query',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'findFirstLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'orderBy',
+              orderBy,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'cursor',
+              cursor,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'take',
+              take,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'skip',
+              skip,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'distinct',
+              distinct,
+              isRequired: false,
+            ),
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return result.data['findFirstLawsuit'] == null
+        ? null
+        : Lawsuit.fromJson((result.data['findFirstLawsuit'] as Map).cast());
+  }
+
+  Future<List<Lawsuit>> findMany({
+    _i1.PrismaNullable<LawsuitWhereInput> where,
+    _i1.PrismaNullable<List<LawsuitOrderByWithRelationInput>> orderBy,
+    _i1.PrismaNullable<LawsuitWhereUniqueInput> cursor,
+    _i1.PrismaNullable<int> take,
+    _i1.PrismaNullable<int> skip,
+    _i1.PrismaNullable<List<LawsuitScalarFieldEnum>> distinct,
+  }) async {
+    final String sdl = _i1.GraphQLField(
+      'query',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'findManyLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'orderBy',
+              orderBy,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'cursor',
+              cursor,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'take',
+              take,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'skip',
+              skip,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'distinct',
+              distinct,
+              isRequired: false,
+            ),
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return (result.data['findManyLawsuit'] as List)
+        .whereType<Map>()
+        .map((Map e) => Lawsuit.fromJson(e.cast()))
+        .toList();
+  }
+
+  Future<Lawsuit> create({required LawsuitCreateInput data}) async {
+    final String sdl = _i1.GraphQLField(
+      'mutation',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'createOneLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'data',
+              data,
+              isRequired: true,
+            )
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return Lawsuit.fromJson((result.data['createOneLawsuit'] as Map).cast());
+  }
+
+  Future<_i1.PrismaNullable<Lawsuit>> update({
+    required LawsuitUpdateInput data,
+    required LawsuitWhereUniqueInput where,
+  }) async {
+    final String sdl = _i1.GraphQLField(
+      'mutation',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'updateOneLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'data',
+              data,
+              isRequired: true,
+            ),
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: true,
+            ),
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return result.data['updateOneLawsuit'] == null
+        ? null
+        : Lawsuit.fromJson((result.data['updateOneLawsuit'] as Map).cast());
+  }
+
+  Future<AffectedRowsOutput> updateMany({
+    required LawsuitUpdateManyMutationInput data,
+    _i1.PrismaNullable<LawsuitWhereInput> where,
+  }) async {
+    final String sdl = _i1.GraphQLField(
+      'mutation',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'updateManyLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'data',
+              data,
+              isRequired: true,
+            ),
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: false,
+            ),
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return AffectedRowsOutput.fromJson(
+        (result.data['updateManyLawsuit'] as Map).cast());
+  }
+
+  Future<Lawsuit> upsert({
+    required LawsuitWhereUniqueInput where,
+    required LawsuitCreateInput create,
+    required LawsuitUpdateInput update,
+  }) async {
+    final String sdl = _i1.GraphQLField(
+      'mutation',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'upsertOneLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: true,
+            ),
+            _i1.GraphQLArg(
+              'create',
+              create,
+              isRequired: true,
+            ),
+            _i1.GraphQLArg(
+              'update',
+              update,
+              isRequired: true,
+            ),
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return Lawsuit.fromJson((result.data['upsertOneLawsuit'] as Map).cast());
+  }
+
+  Future<_i1.PrismaNullable<Lawsuit>> delete(
+      {required LawsuitWhereUniqueInput where}) async {
+    final String sdl = _i1.GraphQLField(
+      'mutation',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'deleteOneLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: true,
+            )
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return result.data['deleteOneLawsuit'] == null
+        ? null
+        : Lawsuit.fromJson((result.data['deleteOneLawsuit'] as Map).cast());
+  }
+
+  Future<AffectedRowsOutput> deleteMany(
+      {_i1.PrismaNullable<LawsuitWhereInput> where}) async {
+    final String sdl = _i1.GraphQLField(
+      'mutation',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'deleteManyLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: false,
+            )
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return AffectedRowsOutput.fromJson(
+        (result.data['deleteManyLawsuit'] as Map).cast());
+  }
+
+  Future<AggregateLawsuit> aggregate({
+    _i1.PrismaNullable<LawsuitWhereInput> where,
+    _i1.PrismaNullable<List<LawsuitOrderByWithRelationInput>> orderBy,
+    _i1.PrismaNullable<LawsuitWhereUniqueInput> cursor,
+    _i1.PrismaNullable<int> take,
+    _i1.PrismaNullable<int> skip,
+  }) async {
+    final String sdl = _i1.GraphQLField(
+      'query',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'aggregateLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'orderBy',
+              orderBy,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'cursor',
+              cursor,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'take',
+              take,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'skip',
+              skip,
+              isRequired: false,
+            ),
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return AggregateLawsuit.fromJson(
+        (result.data['aggregateLawsuit'] as Map).cast());
+  }
+
+  Future<List<LawsuitGroupByOutputType>> groupBy({
+    _i1.PrismaNullable<LawsuitWhereInput> where,
+    _i1.PrismaNullable<List<LawsuitOrderByWithAggregationInput>> orderBy,
+    required List<LawsuitScalarFieldEnum> by,
+    _i1.PrismaNullable<LawsuitScalarWhereWithAggregatesInput> having,
+    _i1.PrismaNullable<int> take,
+    _i1.PrismaNullable<int> skip,
+  }) async {
+    final String sdl = _i1.GraphQLField(
+      'query',
+      fields: _i1.GraphQLFields([
+        _i1.GraphQLField(
+          'groupByLawsuit',
+          args: _i1.GraphQLArgs([
+            _i1.GraphQLArg(
+              'where',
+              where,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'orderBy',
+              orderBy,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'by',
+              by,
+              isRequired: true,
+            ),
+            _i1.GraphQLArg(
+              'having',
+              having,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'take',
+              take,
+              isRequired: false,
+            ),
+            _i1.GraphQLArg(
+              'skip',
+              skip,
+              isRequired: false,
+            ),
+          ]),
+          fields: _i1.GraphQLFields(LawsuitScalarFieldEnum.values
+              .map((LawsuitScalarFieldEnum e) =>
+                  _i1.GraphQLField(_i1.languageKeywordDecode(e.name)))
+              .toList()),
+        )
+      ]),
+    ).toSdl();
+    final _i1.QueryEngineResult result = await _engine.request(
+      query: sdl,
+      headers: _headers,
+    );
+    return (result.data['groupByLawsuit'] as List)
+        .whereType<Map>()
+        .map((Map e) => LawsuitGroupByOutputType.fromJson(e.cast()))
+        .toList();
+  }
+}
+
 final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
   'datamodel': {
     'models': [
@@ -5166,6 +7126,613 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'relationName': 'UserToUserSession',
               'relationFromFields': ['userId'],
               'relationToFields': ['id'],
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          ],
+          'primaryKey': null,
+          'uniqueFields': [],
+          'uniqueIndexes': [],
+          'isGenerated': false,
+        },
+      },
+      {
+        'name': 'Lawsuit',
+        'dbName': null,
+        'fields': [
+          {
+            'name': 'id',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': true,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'Int',
+            'default': {
+              'name': 'autoincrement',
+              'args': [],
+            },
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'id',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': true,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': {
+                'name': 'autoincrement',
+                'args': [],
+              },
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'subjectId',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'Int',
+            'default': -1.0,
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'subjectId',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': -1.0,
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'claimType',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'Int',
+            'default': -1.0,
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'claimType',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': -1.0,
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'claimValue',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'Float',
+            'default': -1.0,
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'claimValue',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Float',
+              'default': -1.0,
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'suingEntityType',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'Int',
+            'default': 0.0,
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'suingEntityType',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': 0.0,
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'suingFirstName',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'String',
+            'default': '',
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'suingFirstName',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'suingLastName',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'String',
+            'default': '',
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'suingLastName',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'suingOrganizationName',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'String',
+            'default': '',
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'suingOrganizationName',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'suingOrganizationNumber',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'String',
+            'default': '',
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'suingOrganizationNumber',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'suingAddress',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'String',
+            'default': '',
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'suingAddress',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'suingCity',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'String',
+            'default': '',
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'suingCity',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+          {
+            'name': 'suingPostCode',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'String',
+            'default': '',
+            'isGenerated': false,
+            'isUpdatedAt': false,
+            'dbNames': null,
+            'relationFromFields': null,
+            'relationToFields': null,
+            'relationOnDelete': null,
+            'relationName': null,
+            'documentation': null,
+            'additionalProperties': {
+              'name': 'suingPostCode',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+          },
+        ],
+        'primaryKey': null,
+        'uniqueFields': [],
+        'uniqueIndexes': [],
+        'isGenerated': false,
+        'fieldsMap': null,
+        'documentation': null,
+        'extra': {
+          'name': 'Lawsuit',
+          'dbName': null,
+          'fields': [
+            {
+              'name': 'id',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': true,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': {
+                'name': 'autoincrement',
+                'args': [],
+              },
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'subjectId',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': -1.0,
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'claimType',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': -1.0,
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'claimValue',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Float',
+              'default': -1.0,
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'suingEntityType',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'Int',
+              'default': 0.0,
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'suingFirstName',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'suingLastName',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'suingAddress',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'suingCity',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
+              'isGenerated': false,
+              'isUpdatedAt': false,
+            },
+            {
+              'name': 'suingPostCode',
+              'kind': 'scalar',
+              'isList': false,
+              'isRequired': true,
+              'isUnique': false,
+              'isId': false,
+              'isReadOnly': false,
+              'hasDefaultValue': true,
+              'type': 'String',
+              'default': '',
               'isGenerated': false,
               'isUpdatedAt': false,
             },
@@ -6759,6 +9326,1124 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
                 {
                   'isList': false,
                   'type': 'DateTime',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitWhereInput',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'AND',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'LawsuitWhereInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': true,
+                  'type': 'LawsuitWhereInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'OR',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': true,
+                  'type': 'LawsuitWhereInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'NOT',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'LawsuitWhereInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': true,
+                  'type': 'LawsuitWhereInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'FloatFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitOrderByWithRelationInput',
+          'constraints': {
+            'maxNumFields': 1,
+            'minNumFields': 0,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitWhereUniqueInput',
+          'constraints': {
+            'maxNumFields': 1,
+            'minNumFields': 1,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            }
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitOrderByWithAggregationInput',
+          'constraints': {
+            'maxNumFields': 1,
+            'minNumFields': 0,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_count',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'LawsuitCountOrderByAggregateInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_avg',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'LawsuitAvgOrderByAggregateInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_max',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'LawsuitMaxOrderByAggregateInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_min',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'LawsuitMinOrderByAggregateInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_sum',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'LawsuitSumOrderByAggregateInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitScalarWhereWithAggregatesInput',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'AND',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'LawsuitScalarWhereWithAggregatesInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': true,
+                  'type': 'LawsuitScalarWhereWithAggregatesInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'OR',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': true,
+                  'type': 'LawsuitScalarWhereWithAggregatesInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'NOT',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'LawsuitScalarWhereWithAggregatesInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': true,
+                  'type': 'LawsuitScalarWhereWithAggregatesInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'FloatWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'IntWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'StringWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+                {
+                  'isList': false,
+                  'type': 'String',
                   'location': 'scalar',
                   'namespace': null,
                 },
@@ -8396,6 +12081,1377 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
                 {
                   'isList': false,
                   'type': 'DateTimeFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitCreateInput',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitUncheckedCreateInput',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitUpdateInput',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'FloatFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitUncheckedUpdateInput',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'FloatFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitUpdateManyMutationInput',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'FloatFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitUncheckedUpdateManyInput',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'FloatFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Int',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'IntFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'String',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'StringFieldUpdateOperationsInput',
                   'location': 'inputObjectTypes',
                   'namespace': 'prisma',
                 },
@@ -10417,6 +15473,1093 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           'fieldMap': null,
         },
         {
+          'name': 'FloatFilter',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'equals',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'in',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': true,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'notIn',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': true,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'lt',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'lte',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'gt',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'gte',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'not',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'NestedFloatFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitCountOrderByAggregateInput',
+          'constraints': {
+            'maxNumFields': 1,
+            'minNumFields': 1,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitAvgOrderByAggregateInput',
+          'constraints': {
+            'maxNumFields': 1,
+            'minNumFields': 1,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitMaxOrderByAggregateInput',
+          'constraints': {
+            'maxNumFields': 1,
+            'minNumFields': 1,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitMinOrderByAggregateInput',
+          'constraints': {
+            'maxNumFields': 1,
+            'minNumFields': 1,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingCity',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitSumOrderByAggregateInput',
+          'constraints': {
+            'maxNumFields': 1,
+            'minNumFields': 1,
+          },
+          'fields': [
+            {
+              'name': 'id',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'subjectId',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'claimValue',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'SortOrder',
+                  'location': 'enumTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'FloatWithAggregatesFilter',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'equals',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'in',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': true,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'notIn',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': true,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'lt',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'lte',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'gt',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'gte',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'not',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'NestedFloatWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_count',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedIntFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_avg',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedFloatFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_sum',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedFloatFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_min',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedFloatFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_max',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedFloatFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
           'name': 'UserSessionCreateNestedManyWithoutUserInput',
           'constraints': {
             'maxNumFields': null,
@@ -11337,6 +17480,91 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
                   'location': 'inputObjectTypes',
                   'namespace': 'prisma',
                 },
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'FloatFieldUpdateOperationsInput',
+          'constraints': {
+            'maxNumFields': 1,
+            'minNumFields': 1,
+          },
+          'fields': [
+            {
+              'name': 'set',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'increment',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'decrement',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'multiply',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'divide',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
               ],
               'deprecation': null,
             },
@@ -12541,6 +18769,217 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
                 {
                   'isList': false,
                   'type': 'NestedDateTimeFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'NestedFloatWithAggregatesFilter',
+          'constraints': {
+            'maxNumFields': null,
+            'minNumFields': null,
+          },
+          'fields': [
+            {
+              'name': 'equals',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'in',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': true,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'notIn',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': true,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'lt',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'lte',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'gt',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'gte',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': 'not',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'Float',
+                  'location': 'scalar',
+                  'namespace': null,
+                },
+                {
+                  'isList': false,
+                  'type': 'NestedFloatWithAggregatesFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                },
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_count',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedIntFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_avg',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedFloatFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_sum',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedFloatFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_min',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedFloatFilter',
+                  'location': 'inputObjectTypes',
+                  'namespace': 'prisma',
+                }
+              ],
+              'deprecation': null,
+            },
+            {
+              'name': '_max',
+              'comment': null,
+              'isNullable': false,
+              'isRequired': false,
+              'inputTypes': [
+                {
+                  'isList': false,
+                  'type': 'NestedFloatFilter',
                   'location': 'inputObjectTypes',
                   'namespace': 'prisma',
                 }
@@ -14481,6 +20920,168 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           ],
           'fieldMap': null,
         },
+        {
+          'name': 'Lawsuit',
+          'fields': [
+            {
+              'name': 'id',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'subjectId',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimType',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimValue',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingCity',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
       ],
       'prisma': [
         {
@@ -15406,6 +22007,466 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'deprecation': null,
               'documentation': null,
             },
+            {
+              'name': 'findFirstLawsuit',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Lawsuit',
+                'location': 'outputObjectTypes',
+                'namespace': 'model',
+              },
+              'args': [
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'orderBy',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': true,
+                      'type': 'LawsuitOrderByWithRelationInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitOrderByWithRelationInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'cursor',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereUniqueInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'take',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'Int',
+                      'location': 'scalar',
+                      'namespace': null,
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'skip',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'Int',
+                      'location': 'scalar',
+                      'namespace': null,
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'distinct',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': true,
+                      'type': 'LawsuitScalarFieldEnum',
+                      'location': 'enumTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'findManyLawsuit',
+              'isNullable': false,
+              'outputType': {
+                'isList': true,
+                'type': 'Lawsuit',
+                'location': 'outputObjectTypes',
+                'namespace': 'model',
+              },
+              'args': [
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'orderBy',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': true,
+                      'type': 'LawsuitOrderByWithRelationInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitOrderByWithRelationInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'cursor',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereUniqueInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'take',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'Int',
+                      'location': 'scalar',
+                      'namespace': null,
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'skip',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'Int',
+                      'location': 'scalar',
+                      'namespace': null,
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'distinct',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': true,
+                      'type': 'LawsuitScalarFieldEnum',
+                      'location': 'enumTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'aggregateLawsuit',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'AggregateLawsuit',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'orderBy',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': true,
+                      'type': 'LawsuitOrderByWithRelationInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitOrderByWithRelationInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'cursor',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereUniqueInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'take',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'Int',
+                      'location': 'scalar',
+                      'namespace': null,
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'skip',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'Int',
+                      'location': 'scalar',
+                      'namespace': null,
+                    }
+                  ],
+                  'deprecation': null,
+                },
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'groupByLawsuit',
+              'isNullable': false,
+              'outputType': {
+                'isList': true,
+                'type': 'LawsuitGroupByOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'orderBy',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': true,
+                      'type': 'LawsuitOrderByWithAggregationInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitOrderByWithAggregationInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'by',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': true,
+                      'type': 'LawsuitScalarFieldEnum',
+                      'location': 'enumTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitScalarFieldEnum',
+                      'location': 'enumTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'having',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitScalarWhereWithAggregatesInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'take',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'Int',
+                      'location': 'scalar',
+                      'namespace': null,
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'skip',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'Int',
+                      'location': 'scalar',
+                      'namespace': null,
+                    }
+                  ],
+                  'deprecation': null,
+                },
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'findUniqueLawsuit',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Lawsuit',
+                'location': 'outputObjectTypes',
+                'namespace': 'model',
+              },
+              'args': [
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereUniqueInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                }
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
           ],
           'fieldMap': null,
         },
@@ -15930,6 +22991,270 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
                     {
                       'isList': false,
                       'type': 'UserSessionWhereInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                }
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'createOneLawsuit',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Lawsuit',
+                'location': 'outputObjectTypes',
+                'namespace': 'model',
+              },
+              'args': [
+                {
+                  'name': 'data',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitCreateInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitUncheckedCreateInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                }
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'upsertOneLawsuit',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Lawsuit',
+                'location': 'outputObjectTypes',
+                'namespace': 'model',
+              },
+              'args': [
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereUniqueInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'create',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitCreateInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitUncheckedCreateInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'update',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitUpdateInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitUncheckedUpdateInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                },
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'deleteOneLawsuit',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Lawsuit',
+                'location': 'outputObjectTypes',
+                'namespace': 'model',
+              },
+              'args': [
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereUniqueInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                }
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'updateOneLawsuit',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Lawsuit',
+                'location': 'outputObjectTypes',
+                'namespace': 'model',
+              },
+              'args': [
+                {
+                  'name': 'data',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitUpdateInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitUncheckedUpdateInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereUniqueInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'updateManyLawsuit',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'AffectedRowsOutput',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [
+                {
+                  'name': 'data',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': true,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitUpdateManyMutationInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                    {
+                      'isList': false,
+                      'type': 'LawsuitUncheckedUpdateManyInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    },
+                  ],
+                  'deprecation': null,
+                },
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereInput',
+                      'location': 'inputObjectTypes',
+                      'namespace': 'prisma',
+                    }
+                  ],
+                  'deprecation': null,
+                },
+              ],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'deleteManyLawsuit',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'AffectedRowsOutput',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [
+                {
+                  'name': 'where',
+                  'comment': null,
+                  'isNullable': false,
+                  'isRequired': false,
+                  'inputTypes': [
+                    {
+                      'isList': false,
+                      'type': 'LawsuitWhereInput',
                       'location': 'inputObjectTypes',
                       'namespace': 'prisma',
                     }
@@ -16487,6 +23812,304 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
               'outputType': {
                 'isList': false,
                 'type': 'UserSessionMaxAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'AggregateLawsuit',
+          'fields': [
+            {
+              'name': '_count',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitCountAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_avg',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitAvgAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_sum',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitSumAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_min',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitMinAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_max',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitMaxAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitGroupByOutputType',
+          'fields': [
+            {
+              'name': 'id',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'subjectId',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimType',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimValue',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingCity',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_count',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitCountAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_avg',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitAvgAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_sum',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitSumAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_min',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitMinAggregateOutputType',
+                'location': 'outputObjectTypes',
+                'namespace': 'prisma',
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_max',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'LawsuitMaxAggregateOutputType',
                 'location': 'outputObjectTypes',
                 'namespace': 'prisma',
               },
@@ -17245,11 +24868,669 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
           ],
           'fieldMap': null,
         },
+        {
+          'name': 'LawsuitCountAggregateOutputType',
+          'fields': [
+            {
+              'name': 'id',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'subjectId',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimType',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimValue',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingCity',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': '_all',
+              'isNullable': false,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitAvgAggregateOutputType',
+          'fields': [
+            {
+              'name': 'id',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'subjectId',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimType',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimValue',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitSumAggregateOutputType',
+          'fields': [
+            {
+              'name': 'id',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'subjectId',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimType',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimValue',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitMinAggregateOutputType',
+          'fields': [
+            {
+              'name': 'id',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'subjectId',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimType',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimValue',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingCity',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
+        {
+          'name': 'LawsuitMaxAggregateOutputType',
+          'fields': [
+            {
+              'name': 'id',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'subjectId',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimType',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'claimValue',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Float',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingEntityType',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'Int',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingFirstName',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingLastName',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationName',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingOrganizationNumber',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingAddress',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingCity',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+            {
+              'name': 'suingPostCode',
+              'isNullable': true,
+              'outputType': {
+                'isList': false,
+                'type': 'String',
+                'location': 'scalar',
+                'namespace': null,
+              },
+              'args': [],
+              'deprecation': null,
+              'documentation': null,
+            },
+          ],
+          'fieldMap': null,
+        },
       ],
     },
     'enumTypes': {
       'model': null,
       'prisma': [
+        {
+          'name': 'LawsuitScalarFieldEnum',
+          'values': [
+            'id',
+            'subjectId',
+            'claimType',
+            'claimValue',
+            'suingEntityType',
+            'suingFirstName',
+            'suingLastName',
+            'suingOrganizationName',
+            'suingOrganizationNumber',
+            'suingAddress',
+            'suingCity',
+            'suingPostCode',
+          ],
+        },
         {
           'name': 'SortOrder',
           'values': [
@@ -17324,6 +25605,23 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
         'findRaw': null,
         'aggregateRaw': null,
       },
+      {
+        'model': 'Lawsuit',
+        'findUnique': 'findUniqueLawsuit',
+        'findFirst': 'findFirstLawsuit',
+        'findMany': 'findManyLawsuit',
+        'create': 'createOneLawsuit',
+        'createMany': null,
+        'update': 'updateOneLawsuit',
+        'updateMany': 'updateManyLawsuit',
+        'upsert': 'upsertOneLawsuit',
+        'delete': 'deleteOneLawsuit',
+        'deleteMany': 'deleteManyLawsuit',
+        'aggregate': 'aggregateLawsuit',
+        'groupBy': 'groupByLawsuit',
+        'findRaw': null,
+        'aggregateRaw': null,
+      },
     ],
     'otherOperations': {
       'read': [],
@@ -17335,7 +25633,7 @@ final _i3.Document dmmf = _i3.Document.fromJson(<String, dynamic>{
   },
 });
 final String schema = _i4.utf8.decode(_i4.base64.decode(
-    r'Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgICAgICAgID0gInByaXNtYS1jbGllbnQtZGFydCIKICBwcmV2aWV3RmVhdHVyZXMgPSBbImludGVyYWN0aXZlVHJhbnNhY3Rpb25zIl0KICBvdXRwdXQgICAgICAgICAgPSAiLi4vbGliL3ByaXNtYV9jbGllbnQuZGFydCIKfQoKZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAic3FsaXRlIgogIHVybCAgICAgID0gImZpbGU6Li9kZXYuZGIiCn0KCm1vZGVsIFVzZXIgewogIGlkICAgICAgICAgICAgSW50ICAgICAgICAgICBAaWQgQGRlZmF1bHQoYXV0b2luY3JlbWVudCgpKQogIGVtYWlsICAgICAgICAgU3RyaW5nCiAgcGFzc3dvcmRIYXNoICBTdHJpbmcKICBmaXJzdE5hbWUgICAgIFN0cmluZwogIGxhc3ROYW1lICAgICAgU3RyaW5nCiAgY3JlYXRlZEF0ICAgICBEYXRlVGltZSAgICAgIEBkZWZhdWx0KG5vdygpKQogIHVwZGF0ZWRBdCAgICAgRGF0ZVRpbWUgICAgICBAdXBkYXRlZEF0CiAgc2Vzc2lvbnMgICAgICBVc2VyU2Vzc2lvbltdCn0KCm1vZGVsIFVzZXJTZXNzaW9uIHsKICBpZCAgICAgICAgICAgIEludCAgICAgICAgICAgQGlkIEBkZWZhdWx0KGF1dG9pbmNyZW1lbnQoKSkKICB1c2VySWQgICAgICAgIEludAogIGFjY2Vzc1Rva2VuICAgU3RyaW5nCiAgcmVmcmVzaFRva2VuICBTdHJpbmcKICBleHBpcmVzQXQgICAgIERhdGVUaW1lCiAgY3JlYXRlZEF0ICAgICBEYXRlVGltZSAgICAgIEBkZWZhdWx0KG5vdygpKQogIHVwZGF0ZWRBdCAgICAgRGF0ZVRpbWUgICAgICBAdXBkYXRlZEF0CiAgCiAgdXNlciAgICAgICAgICBVc2VyICAgICAgICAgIEByZWxhdGlvbihmaWVsZHM6IFt1c2VySWRdLCByZWZlcmVuY2VzOiBbaWRdKQp9Cgo='));
+    r'Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgICAgICAgID0gInByaXNtYS1jbGllbnQtZGFydCIKICBwcmV2aWV3RmVhdHVyZXMgPSBbImludGVyYWN0aXZlVHJhbnNhY3Rpb25zIl0KICBvdXRwdXQgICAgICAgICAgPSAiLi4vbGliL3ByaXNtYV9jbGllbnQuZGFydCIKfQoKZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAic3FsaXRlIgogIHVybCAgICAgID0gImZpbGU6Li9kZXYuZGIiCn0KCm1vZGVsIFVzZXIgewogIGlkICAgICAgICAgICAgSW50ICAgICAgICAgICBAaWQgQGRlZmF1bHQoYXV0b2luY3JlbWVudCgpKQogIGVtYWlsICAgICAgICAgU3RyaW5nCiAgcGFzc3dvcmRIYXNoICBTdHJpbmcKICBmaXJzdE5hbWUgICAgIFN0cmluZwogIGxhc3ROYW1lICAgICAgU3RyaW5nCiAgY3JlYXRlZEF0ICAgICBEYXRlVGltZSAgICAgIEBkZWZhdWx0KG5vdygpKQogIHVwZGF0ZWRBdCAgICAgRGF0ZVRpbWUgICAgICBAdXBkYXRlZEF0CiAgc2Vzc2lvbnMgICAgICBVc2VyU2Vzc2lvbltdCn0KCm1vZGVsIFVzZXJTZXNzaW9uIHsKICBpZCAgICAgICAgICAgIEludCAgICAgICAgICAgQGlkIEBkZWZhdWx0KGF1dG9pbmNyZW1lbnQoKSkKICB1c2VySWQgICAgICAgIEludAogIGFjY2Vzc1Rva2VuICAgU3RyaW5nCiAgcmVmcmVzaFRva2VuICBTdHJpbmcKICBleHBpcmVzQXQgICAgIERhdGVUaW1lCiAgY3JlYXRlZEF0ICAgICBEYXRlVGltZSAgICAgIEBkZWZhdWx0KG5vdygpKQogIHVwZGF0ZWRBdCAgICAgRGF0ZVRpbWUgICAgICBAdXBkYXRlZEF0CiAgCiAgdXNlciAgICAgICAgICBVc2VyICAgICAgICAgIEByZWxhdGlvbihmaWVsZHM6IFt1c2VySWRdLCByZWZlcmVuY2VzOiBbaWRdKQp9Cgptb2RlbCBMYXdzdWl0IHsKICBpZCAgICAgICAgICAgICAgICAgICAgICBJbnQgICAgICAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgc3ViamVjdElkICAgICAgICAgICAgICAgSW50ICAgICAgICAgICBAZGVmYXVsdCgtMSkKICBjbGFpbVR5cGUgICAgICAgICAgICAgICBJbnQgICAgICAgICAgIEBkZWZhdWx0KC0xKQogIGNsYWltVmFsdWUgICAgICAgICAgICAgIEZsb2F0ICAgICAgICAgQGRlZmF1bHQoLTEpCiAgc3VpbmdFbnRpdHlUeXBlICAgICAgICAgSW50ICAgICAgICAgICBAZGVmYXVsdCgwKQogIHN1aW5nRmlyc3ROYW1lICAgICAgICAgIFN0cmluZyAgICAgICAgQGRlZmF1bHQoIiIpCiAgc3VpbmdMYXN0TmFtZSAgICAgICAgICAgU3RyaW5nICAgICAgICBAZGVmYXVsdCgiIikKICBzdWluZ09yZ2FuaXphdGlvbk5hbWUgICBTdHJpbmcgICAgICAgIEBkZWZhdWx0KCIiKQogIHN1aW5nT3JnYW5pemF0aW9uTnVtYmVyIFN0cmluZyAgICAgICAgQGRlZmF1bHQoIiIpCiAgc3VpbmdBZGRyZXNzICAgICAgICAgICAgU3RyaW5nICAgICAgICBAZGVmYXVsdCgiIikKICBzdWluZ0NpdHkgICAgICAgICAgICAgICBTdHJpbmcgICAgICAgIEBkZWZhdWx0KCIiKQogIHN1aW5nUG9zdENvZGUgICAgICAgICAgIFN0cmluZyAgICAgICAgQGRlZmF1bHQoIiIpCn0KCg=='));
 const String _executable =
     r'D:\dart_projects\zloz_mnie\.dart_tool\prisma\query-engine';
 
@@ -17386,6 +25684,10 @@ class PrismaClient {
         _headers,
       );
   UserSessionDelegate get userSession => UserSessionDelegate._(
+        _engine,
+        _headers,
+      );
+  LawsuitDelegate get lawsuit => LawsuitDelegate._(
         _engine,
         _headers,
       );
