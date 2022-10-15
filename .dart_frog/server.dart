@@ -29,34 +29,34 @@ Future<HttpServer> createServer() {
 Handler buildRootHandler() {
   final pipeline = const Pipeline().addMiddleware(middleware.middleware);
   final router = Router()
-    ..mount('/auth/login', (r) => buildAuthLoginHandler()(r))
-    ..mount('/auth/refresh', (r) => buildAuthRefreshHandler()(r))
-    ..mount('/auth/user', (r) => buildAuthUserHandler()(r))
-    ..mount('/auth', (r) => buildAuthHandler()(r))
-    ..mount('/lawsuit/subject', (r) => buildLawsuitSubjectHandler()(r))
-    ..mount('/lawsuit', (r) => buildLawsuitHandler()(r))
-    ..mount('/', (r) => buildHandler()(r));
+    ..mount('/auth/login', (ctx, ) => buildAuthLoginHandler()(ctx))
+    ..mount('/auth/refresh', (ctx, ) => buildAuthRefreshHandler()(ctx))
+    ..mount('/auth/user', (ctx, ) => buildAuthUserHandler()(ctx))
+    ..mount('/auth', (ctx, ) => buildAuthHandler()(ctx))
+    ..mount('/lawsuit/subject', (ctx, ) => buildLawsuitSubjectHandler()(ctx))
+    ..mount('/lawsuit', (ctx, ) => buildLawsuitHandler()(ctx))
+    ..mount('/', (ctx, ) => buildHandler()(ctx));
   return pipeline.addHandler(router);
 }
 
 Handler buildAuthLoginHandler() {
   final pipeline = const Pipeline().addMiddleware(auth_login_middleware.middleware);
   final router = Router()
-    ..all('/', auth_login_index.onRequest);
+    ..all('/', (ctx,) => auth_login_index.onRequest(ctx, ));
   return pipeline.addHandler(router);
 }
 
 Handler buildAuthRefreshHandler() {
   final pipeline = const Pipeline().addMiddleware(auth_refresh_middleware.middleware);
   final router = Router()
-    ..all('/', auth_refresh_index.onRequest);
+    ..all('/', (ctx,) => auth_refresh_index.onRequest(ctx, ));
   return pipeline.addHandler(router);
 }
 
 Handler buildAuthUserHandler() {
   final pipeline = const Pipeline().addMiddleware(auth_user_middleware.middleware);
   final router = Router()
-    ..all('/', auth_user_index.onRequest);
+    ..all('/', (ctx,) => auth_user_index.onRequest(ctx, ));
   return pipeline.addHandler(router);
 }
 
@@ -70,7 +70,7 @@ Handler buildAuthHandler() {
 Handler buildLawsuitSubjectHandler() {
   const pipeline = Pipeline();
   final router = Router()
-    ..all('/', lawsuit_subject_index.onRequest);
+    ..all('/', (ctx,) => lawsuit_subject_index.onRequest(ctx, ));
   return pipeline.addHandler(router);
 }
 
@@ -84,6 +84,6 @@ Handler buildLawsuitHandler() {
 Handler buildHandler() {
   const pipeline = Pipeline();
   final router = Router()
-    ..all('/', index.onRequest);
+    ..all('/', (ctx,) => index.onRequest(ctx, ));
   return pipeline.addHandler(router);
 }
